@@ -45,6 +45,7 @@ public class GorbageGame : MonoBehaviour
         {
             badGarbageCount++;
             LeanTween.moveX(gorbageImage.rectTransform, 736, .3f);
+            gorbageImage.enabled = false;
             gorbageImage.rectTransform.position = new Vector3(0, 0, 0);
             //I dont know how to play the animation and set it back to 0 in a good way
         }
@@ -52,6 +53,7 @@ public class GorbageGame : MonoBehaviour
         {
             gorbageCount++;
             LeanTween.moveX(badGarbageImage.rectTransform, 736, .3f);
+            gorbageImage.enabled = false;
             badGarbageImage.rectTransform.position = new Vector3(0, 0, 0);
             //I dont know how to play the animation and set it back to 0 in a good way
         }
