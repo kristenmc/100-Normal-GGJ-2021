@@ -20,9 +20,15 @@ public class ShopMenu : MonoBehaviour
     private Story story;
     public Button buttonPrefab;
 
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        //Finding the gameobject initally when runned for the first time
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        
+        
         // Load the next story block
         story = new Story(inkJSONAsset.text);
 
@@ -37,6 +43,7 @@ public class ShopMenu : MonoBehaviour
     //  – Iterate through any choices and create listeners on them
     void refresh()
     {
+        //Debug.Log("gorbage = " + gameManager.getGorbageAmt() + " food = " + gameManager.getFoodAmt() + " water = " + gameManager.getWaterAmt());
         // Clear the UI
         clearUI();
         // Create a new GameObject
@@ -50,8 +57,6 @@ public class ShopMenu : MonoBehaviour
         newTextObject.fontSize = 24;
         // Set the text from new story block
         newTextObject.text = getNextStoryBlock();
-
-        Debug.Log(newTextObject.text);
 
         // Load Arial from the built-in resources
         newTextObject.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
@@ -118,21 +123,29 @@ public class ShopMenu : MonoBehaviour
         {   
             //checks if players can buy anything at the shop
             if (tags[0] == "check_gorbage")
-            {
-                //get_gorbage() > 0
-                //story.variablesState["haveGorbage"] = true;
-                //setGorbage(getGorbage() - 1);
-                //else
-                //story.variablesState["haveGorbage"] = false;
+            {   
+
+                if (gameManager.getGorbageAmt() > 0)
+                {
+                    story.variablesState["haveGorbage"] = true;
+                }
+                else
+                {
+                    story.variablesState["haveGorbage"] = false;
+                }
+
             }
             //adds food to the player resource 
             else if (tags[0] == "food")
             {
-                //setfood(getFood() + 1);
+                gameManager.changeGorbage(-1);
+                gameManager.changeFood(+1);
             }
             //adds water to the player resource
             else if (tags[0] == "water")
             {
+                gameManager.changeGorbage(-1);
+                gameManager.changeWater(+1);
                 //setWater(getWater() + 1);
             }
             //This resets the canvas and prepares for the next visit
