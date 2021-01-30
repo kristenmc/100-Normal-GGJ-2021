@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
+    [SerializeField] float rotationSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,20 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(!GameManager.Game_Manager_Instance.getMinigameActivity())
+        {
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                gameObject.transform.Rotate(new Vector3(0, 0, rotationSpeed));
+            }
+            if (Input.GetAxis("Horizontal") < 0)
+            {
+                gameObject.transform.Rotate(new Vector3(0, 0, -rotationSpeed));
+            }
+            if (Input.GetButtonDown("Fire1"))
+            {
+                GameManager.Game_Manager_Instance.spawnInteractables(.2f, .7f, .09f, .01f, InteractType.Water);
+            }
+        }
     }
 }
