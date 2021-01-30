@@ -30,8 +30,8 @@ public class NodeLogic : MonoBehaviour
                     generationWeights[2], generationWeights[3], generationWeights[4], pity);
                 GameManager.Game_Manager_Instance.setSelectedNode(gameObject);
                 GameManager.Game_Manager_Instance.setSelectedNodeConnections(connections);
+                alreadyExplored = true;
             }
         }
-        
     }
 }
