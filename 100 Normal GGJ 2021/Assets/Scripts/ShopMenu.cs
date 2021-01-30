@@ -121,6 +121,7 @@ public class ShopMenu : MonoBehaviour
             {
                 //get_gorbage() > 0
                 //story.variablesState["haveGorbage"] = true;
+                //setGorbage(getGorbage() - 1);
                 //else
                 //story.variablesState["haveGorbage"] = false;
             }
