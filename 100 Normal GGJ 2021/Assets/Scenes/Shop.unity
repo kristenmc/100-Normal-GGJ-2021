@@ -296,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSONAsset: {fileID: 4900000, guid: 20010e65cb3263248813b663add69f84, type: 3}
   buttonPrefab: {fileID: 6163319816840409172, guid: 3fc1476b5bbc31e4b9e8ab70ce143336, type: 3}
+  gameManager: {fileID: 1840635508789154469, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
 --- !u!114 &305777996
 MonoBehaviour:
   m_ObjectHideFlags: 0
