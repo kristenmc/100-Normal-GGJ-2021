@@ -1045,10 +1045,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1840635508789154469, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
-      propertyPath: interactGameObjects.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840635508789154469, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
       propertyPath: interactParents.Array.data[0]
       value: 
       objectReference: {fileID: 341163258}
@@ -1068,21 +1064,5 @@ PrefabInstance:
       propertyPath: interactParents.Array.data[4]
       value: 
       objectReference: {fileID: 1467340557}
-    - target: {fileID: 1840635508789154469, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
-      propertyPath: foodMinigamePrefab
-      value: 
-      objectReference: {fileID: 3162927470697480801, guid: c3692c87e5f118c49a2d25bffce7edce, type: 3}
-    - target: {fileID: 1840635508789154469, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
-      propertyPath: gorbageMinigamePrefab
-      value: 
-      objectReference: {fileID: 6451923501035674919, guid: 8c51190f74e6e7f45baf82a13e5a6dd5, type: 3}
-    - target: {fileID: 1840635508789154469, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
-      propertyPath: waterMinigamePrefab
-      value: 
-      objectReference: {fileID: 54401925635678796, guid: 4cf30a715cff6a84abdfe28e99b1977d, type: 3}
-    - target: {fileID: 1840635508789154469, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
-      propertyPath: shopPrefab
-      value: 
-      objectReference: {fileID: 3842480763945188319, guid: 4405348046ab6244eaee68ca4d87e8ec, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
