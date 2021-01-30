@@ -20,14 +20,14 @@ public class ShopMenu : MonoBehaviour
     private Story story;
     public Button buttonPrefab;
 
-    public GameManager gameManager;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
-    {   
-        //Testing if it does things I want
-        Instantiate(gameManager);
-        gameManager.changeGorbage(5);
+    {
+        //Finding the gameobject initally when runned for the first time
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        
         
         // Load the next story block
         story = new Story(inkJSONAsset.text);
@@ -43,7 +43,7 @@ public class ShopMenu : MonoBehaviour
     //  – Iterate through any choices and create listeners on them
     void refresh()
     {
-        Debug.Log("gorbage = " + gameManager.getGorbageAmt() + " food = " + gameManager.getFoodAmt() + " water = " + gameManager.getWaterAmt());
+        //Debug.Log("gorbage = " + gameManager.getGorbageAmt() + " food = " + gameManager.getFoodAmt() + " water = " + gameManager.getWaterAmt());
         // Clear the UI
         clearUI();
         // Create a new GameObject
@@ -133,18 +133,13 @@ public class ShopMenu : MonoBehaviour
                 {
                     story.variablesState["haveGorbage"] = false;
                 }
-                //get_gorbage() > 0
-                //story.variablesState["haveGorbage"] = true;
-                //setGorbage(getGorbage() - 1);
-                //else
-                //story.variablesState["haveGorbage"] = false;
+
             }
             //adds food to the player resource 
             else if (tags[0] == "food")
             {
                 gameManager.changeGorbage(-1);
                 gameManager.changeFood(+1);
-                //setfood(getFood() + 1);
             }
             //adds water to the player resource
             else if (tags[0] == "water")
