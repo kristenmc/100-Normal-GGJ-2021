@@ -1,39 +1,48 @@
-VAR gorbage = 4
+VAR haveGorbage = true
 -> intro 
-
-===intro
-#char Racoon
+===intro==
+#check_gorbage
     Gimmie da gorbage 
     
     +[items] ->items
     +[exit] ->leave 
 
-===items
-#char Racoon
-    Here's the some non-gorbage things 
-    
-    +[Food] ->thanks
-    +[Water] ->thanks
+===items==
+{-checkTrue(haveGorbage):
+        Here's the some non-gorbage things 
+        +[Food] ->food 
+        +[Water] ->water
+    -else:
+         -> noGorbage
+    }
     +[Return] ->intro
 
-===checkGorabge
-{   - gorbage > 0:
-        ~gorbage = gorbage - 1
-        ->thanks
-    - else:
-        ->noGorbage
-}
+==food==
+#food
+You gained some food! 
+    +[yay!] ->thanks
 
-===thanks
-#char Racoon
+==water==
+#water
+You gained some water! 
+    +[yay!] ->thanks
+===thanks==
+#check_gorbage
     Thank you for your gorbage!
-    ->items
+    +[Return]->items
 
-===noGorbage
-#char Racoon 
+===noGorbage==
     No gorbage, No item!
-    ->items
+    +[Return]->intro
+    +[Exit] -> leave
     
-===leave
+===leave==
     Bring back more gorbage!
+    +[Bye!]->exit
+
+===exit==
+#end
 ->DONE
+
+=== function checkTrue(bool) ===
+    ~return bool == true 
