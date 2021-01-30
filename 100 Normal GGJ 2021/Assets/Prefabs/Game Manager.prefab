@@ -47,6 +47,7 @@ MonoBehaviour:
   waterMinigamePrefab: {fileID: 54401925635678796, guid: 4cf30a715cff6a84abdfe28e99b1977d, type: 3}
   gorbageMinigamePrefab: {fileID: 6451923501035674919, guid: 8c51190f74e6e7f45baf82a13e5a6dd5, type: 3}
   shopPrefab: {fileID: 3842480763945188319, guid: 4405348046ab6244eaee68ca4d87e8ec, type: 3}
+  animalPrefab: {fileID: 2723238391318465668, guid: 23a302e7a8d842d4c86657f840304e6d, type: 3}
   interactParents:
   - {fileID: 0}
   - {fileID: 0}
@@ -59,3 +60,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  minigameActive: 0
+  foodAmt: 0
+  maxFoodAmt: 0
+  waterAmt: 0
+  maxWaterAmt: 0
+  gorbageAmt: 0
+  maxGorbageAmt: 0

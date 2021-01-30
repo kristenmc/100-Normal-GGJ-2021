@@ -26,7 +26,7 @@ public class MovementScript : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1"))
             {
-                GameManager.Game_Manager_Instance.spawnInteractables(.2f, .7f, .09f, .01f, InteractType.Water);
+                GameManager.Game_Manager_Instance.spawnInteractables(.1f, .7f, .14f, .05f, .01f, InteractType.Water);
             }
         }
     }

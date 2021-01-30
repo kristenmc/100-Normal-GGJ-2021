@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum InteractType {Food, Water, Gorbage, Shop}
+public enum InteractType {Food, Water, Gorbage, Shop, Animal}
 public class GameManager : MonoBehaviour
 {
     public static GameManager Game_Manager_Instance;
@@ -12,12 +12,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject waterMinigamePrefab;
     [SerializeField] GameObject gorbageMinigamePrefab;
     [SerializeField] GameObject shopPrefab;
+    [SerializeField] GameObject animalPrefab;
     [SerializeField] GameObject[] interactParents;
     [SerializeField] GameObject[] interactGameObjects; 
-    private int numFood = 0;
-    private int numWater = 0;
-    private int numGorbage = 0;
-    private int numShop = 0;
+    private int numGeneratedFood = 0;
+    private int numGeneratedWater = 0;
+    private int numGeneratedGorbage = 0;
+    private int numGeneratedShop = 0;
+    private int numGeneratedAnimals = 0;
     #endregion
 
     #region Management Vars
@@ -36,71 +38,82 @@ public class GameManager : MonoBehaviour
     }
 
     #region Generation Funcs
-    public void spawnInteractables(float foodWeight, float waterWeight, float gorbageWeight, float shopWeight, InteractType pity)
+    public void spawnInteractables(float foodWeight, float waterWeight, float gorbageWeight, float shopWeight, float animalWeight, InteractType pity)
     {
         foreach(GameObject toDestroy in interactGameObjects)
         {
             Destroy(toDestroy);
         }
-        numFood = 0;
-        numWater = 0;
-        numGorbage = 0;
-        numShop = 0;
+        numGeneratedFood = 0;
+        numGeneratedWater = 0;
+        numGeneratedGorbage = 0;
+        numGeneratedShop = 0;
+        numGeneratedAnimals = 0;
 
         float relativeFoodWeight = foodWeight;
         float relativeWaterWeight = relativeFoodWeight + waterWeight;
         float relativeGorbageWeight = relativeWaterWeight + gorbageWeight;
         float relativeShopWeight = relativeGorbageWeight + shopWeight;
+        float relativeAnimalWeight = relativeShopWeight + animalWeight;
 
         for(int i = 0; i < interactParents.Length-1; i++)
         {
-            generateInteractable(relativeFoodWeight, relativeWaterWeight, relativeGorbageWeight, relativeShopWeight, i);
+            generateInteractable(relativeFoodWeight, relativeWaterWeight, relativeGorbageWeight, relativeShopWeight, relativeAnimalWeight, i);
         }
         //Pity system, checks to see if the pity amount > 0 then force generates it if it is not
-        if(pity == InteractType.Food && numFood == 0)
+        if(pity == InteractType.Food && numGeneratedFood == 0)
         {
             interactGameObjects[interactParents.Length-1] = Instantiate(foodMinigamePrefab, interactParents[interactParents.Length-1].transform);
         }
-        else if(pity == InteractType.Water && numWater == 0)
+        else if(pity == InteractType.Water && numGeneratedWater == 0)
         {
             interactGameObjects[interactParents.Length - 1] = Instantiate(waterMinigamePrefab, interactParents[interactParents.Length-1].transform);
         }
-        else if(pity == InteractType.Gorbage && numGorbage == 0)
+        else if(pity == InteractType.Gorbage && numGeneratedGorbage == 0)
         {
             interactGameObjects[interactParents.Length - 1] = Instantiate(gorbageMinigamePrefab, interactParents[interactParents.Length-1].transform);
         }
-        else if(pity == InteractType.Shop && numShop == 0)
+        else if(pity == InteractType.Shop && numGeneratedShop == 0)
         {
             interactGameObjects[interactParents.Length - 1] = Instantiate(shopPrefab, interactParents[interactParents.Length-1].transform);
         }
+        else if(pity == InteractType.Animal && numGeneratedAnimals == 0)
+        {
+            interactGameObjects[interactParents.Length - 1] = Instantiate(animalPrefab, interactParents[interactParents.Length - 1].transform);
+        }
         else
         {
-            generateInteractable(relativeFoodWeight, relativeWaterWeight, relativeGorbageWeight, relativeShopWeight, interactParents.Length-1);
+            generateInteractable(relativeFoodWeight, relativeWaterWeight, relativeGorbageWeight, relativeShopWeight, relativeAnimalWeight, interactParents.Length-1);
         }
     }
     
-    public void generateInteractable(float foodWeight, float waterWeight, float gorbageWeight, float shopWeight, int iterator)
+    public void generateInteractable(float foodWeight, float waterWeight, float gorbageWeight, float shopWeight, float animalWeight, int iterator)
     {
-        float randomlyGeneratedNumber = Random.Range(0.0f, shopWeight);
+        float randomlyGeneratedNumber = Random.Range(0.0f, animalWeight);
         if (randomlyGeneratedNumber <= foodWeight)
         {
-            numFood++;
+            numGeneratedFood++;
             interactGameObjects[iterator] = Instantiate(foodMinigamePrefab, interactParents[iterator].transform);
         }
         else if (randomlyGeneratedNumber > foodWeight && randomlyGeneratedNumber <= waterWeight)
         {
-            numWater++;
+            numGeneratedWater++;
             interactGameObjects[iterator] = Instantiate(waterMinigamePrefab, interactParents[iterator].transform);
         }
         else if (randomlyGeneratedNumber > waterWeight && randomlyGeneratedNumber <= gorbageWeight)
         {
-            numGorbage++;
+            numGeneratedGorbage++;
             interactGameObjects[iterator] = Instantiate(gorbageMinigamePrefab, interactParents[iterator].transform);
         }
         else if (randomlyGeneratedNumber > gorbageWeight && randomlyGeneratedNumber <= shopWeight)
         {
-            numShop++;
+            numGeneratedShop++;
             interactGameObjects[iterator] = Instantiate(shopPrefab, interactParents[iterator].transform);
+        }
+        else if (randomlyGeneratedNumber > shopWeight && randomlyGeneratedNumber <= animalWeight)
+        {
+            numGeneratedAnimals++;
+            interactGameObjects[iterator] = Instantiate(animalPrefab, interactParents[iterator].transform);
         }
     }
     #endregion
