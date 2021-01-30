@@ -30,7 +30,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] int maxWaterAmt = 0;
     [SerializeField] int gorbageAmt = 0;
     [SerializeField] int maxGorbageAmt = 0;
-    
+    [SerializeField] int animalAmt = 1;
+
+    #endregion
+
+    #region Minimap Vars
+    [SerializeField] GameObject currentNode;
+    [SerializeField] GameObject selectedNode;
+    [SerializeField] GameObject[] currentNodeConnections;
+    [SerializeField] GameObject[] selectedNodeConnections;
     #endregion
     void Awake()
     {
@@ -172,6 +180,56 @@ public class GameManager : MonoBehaviour
     public void changeGorbage(int gorbage)
     {
         gorbageAmt += gorbage;
+    }
+
+    public int getAnimals()
+    {
+        return animalAmt;
+    }
+
+    public void changeAnimals(int animal)
+    {
+        animalAmt += animal;
+    }
+
+    public GameObject getCurrentNode()
+    {
+        return currentNode;
+    }
+
+    public void setCurrentNode(GameObject node)
+    {
+        currentNode = node;
+    }
+
+    public GameObject getSelectedNode()
+    {
+        return selectedNode;
+    }
+
+    public void setSelectedNode(GameObject node)
+    {
+        selectedNode = node;
+    }
+
+    public GameObject[] getCurrentNodeConnections()
+    {
+        return currentNodeConnections;
+    }
+
+    public void setCurrentNodeConnections(GameObject[] connectionsList)
+    {
+        currentNodeConnections = connectionsList;
+    }
+    
+    public GameObject[] getSelectedNodeConnections()
+    {
+        return selectedNodeConnections;
+    }
+
+    public void setSelectedNodeConnections(GameObject[] connectionsList)
+    {
+        selectedNodeConnections = connectionsList;
     }
     #endregion
 }
