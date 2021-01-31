@@ -16,14 +16,18 @@ using Ink.Runtime;
 
 public class ShopMenu : MonoBehaviour
 {
-    public TextAsset inkJSONAsset;
+    [SerializeField] TextAsset inkJSONAsset;
     private Story story;
-    public Button buttonPrefab;
+    [SerializeField] Button buttonPrefab;
 
-    public Image background;
-
+    [SerializeField] Image background;
 
     private GameManager gameManager;
+
+    [SerializeField] int resourcePrice = 1;
+    [SerializeField] int upgradePrice = 1;
+    [SerializeField] int resourceGained = 1;
+    [SerializeField] int upgradeGained = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -145,15 +149,29 @@ public class ShopMenu : MonoBehaviour
             //adds food to the player resource 
             else if (tags[0] == "food")
             {
-                gameManager.changeGorbage(-1);
-                gameManager.changeFood(+1);
+                gameManager.changeGorbage(-resourcePrice);
+                gameManager.changeFood(resourceGained);
             }
             //adds water to the player resource
             else if (tags[0] == "water")
             {
-                gameManager.changeGorbage(-1);
-                gameManager.changeWater(+1);
-                //setWater(getWater() + 1);
+                gameManager.changeGorbage(-resourcePrice);
+                gameManager.changeWater(resourceGained);
+            }
+            else if (tags[0] == "water_purifier")
+            {
+                gameManager.changePurifierAmt(upgradeGained);
+                gameManager.changeGorbage(-upgradePrice);
+            }
+            else if (tags[0] == "net")
+            {
+                gameManager.changeNetsAmt(upgradeGained);
+                gameManager.changeGorbage(-upgradePrice);
+            }
+            else if (tags[0] == "metal_detector")
+            {
+                gameManager.changeDetectorAmt(upgradeGained);
+                gameManager.changeGorbage(-upgradePrice);
             }
             //This resets the canvas and prepares for the next visit
             else if (tags[0] == "end")

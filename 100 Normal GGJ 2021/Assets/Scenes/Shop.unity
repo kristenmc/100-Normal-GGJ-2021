@@ -270,8 +270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 471.2, y: -770.6}
-  m_SizeDelta: {x: 9.690283, y: 155.45374}
+  m_AnchoredPosition: {x: 680.4, y: -770.6}
+  m_SizeDelta: {x: 14.082939, y: 155.45374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89299153
 MonoBehaviour:
@@ -393,6 +393,10 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 20010e65cb3263248813b663add69f84, type: 3}
   buttonPrefab: {fileID: 6163319816840409172, guid: 3fc1476b5bbc31e4b9e8ab70ce143336, type: 3}
   background: {fileID: 772034030}
+  resourcePrice: 1
+  upgradePrice: 1
+  resourceGained: 1
+  upgradeGained: 1
 --- !u!114 &305777996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,7 +754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1840635508789154469, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
       propertyPath: gorbageAmt
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34c36638048bbf247b34f7a50f79122c, type: 3}
