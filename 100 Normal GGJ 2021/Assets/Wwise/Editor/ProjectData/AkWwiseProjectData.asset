@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5fae626e10ae3146a83448e543c8f14c
     GuidInternal: 
-    m_lastTime: -8585896155458341096
+    m_lastTime: -8585895445181639612
     List:
     - name: Main
       guid: 956fa0284a460d40bdb804f883bf17cd
@@ -68,8 +68,266 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: bcdbade782bb83499eca6636e2bb1a5a
     GuidInternal: 
-    m_lastTime: -8585896274702164027
-    List: []
+    m_lastTime: -8585895445184382297
+    List:
+    - name: Fishing Music
+      guid: 699cee4059c59e4b96db10951169bf44
+      id: 3592846184
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Fishing Music
+        ObjectType: 4
+      Path: Default Work Unit\Music\Fishing Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Gorbage Music
+      guid: 247a55857a0a464da5d77440952d7fca
+      id: 3350969125
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Gorbage Music
+        ObjectType: 4
+      Path: Default Work Unit\Music\Gorbage Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music
+      guid: 52d5b0cf848ea14ba448e1214ad2cc03
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      Path: Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Pause_Fishing_Music
+      guid: 48d290f2b1b9234d991a82af5126958b
+      id: 3971424322
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Fishing Music
+        ObjectType: 4
+      - ElementName: Pause_Fishing_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Fishing Music\Pause_Fishing_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Pause_Gorbage_Music
+      guid: 6e72726646176948914d3db8e9557214
+      id: 2092150287
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Gorbage Music
+        ObjectType: 4
+      - ElementName: Pause_Gorbage_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Gorbage Music\Pause_Gorbage_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Pause_Water_Music
+      guid: 21ca7a1312f5804792dba35fb1d3b881
+      id: 3048328929
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Water Music
+        ObjectType: 4
+      - ElementName: Pause_Water_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Water Music\Pause_Water_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Fishing_Music
+      guid: f685385468b5334a861f0f122ea13ef0
+      id: 3207147996
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Fishing Music
+        ObjectType: 4
+      - ElementName: Play_Fishing_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Fishing Music\Play_Fishing_Music
+      maxAttenuation: 0
+      maxDuration: 38.005215
+      minDuration: 38.005215
+    - name: Play_Gorbage_Music
+      guid: 610002fded545e44ad8e4896cd24bec4
+      id: 2023795149
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Gorbage Music
+        ObjectType: 4
+      - ElementName: Play_Gorbage_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Gorbage Music\Play_Gorbage_Music
+      maxAttenuation: 0
+      maxDuration: 39.455643
+      minDuration: 39.455643
+    - name: Play_Water_Music
+      guid: a320ec94f3bbed46961b4591a46b476f
+      id: 1754655507
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Water Music
+        ObjectType: 4
+      - ElementName: Play_Water_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Water Music\Play_Water_Music
+      maxAttenuation: 0
+      maxDuration: 34.55018
+      minDuration: 34.55018
+    - name: Resume_Fishing_Music
+      guid: 1558504786554f4f9fa42b2a68b32716
+      id: 3784097043
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Fishing Music
+        ObjectType: 4
+      - ElementName: Resume_Fishing_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Fishing Music\Resume_Fishing_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Resume_Gorbage_Music
+      guid: 686292c6eb7bae48bc883499de2448fc
+      id: 1625338090
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Gorbage Music
+        ObjectType: 4
+      - ElementName: Resume_Gorbage_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Gorbage Music\Resume_Gorbage_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Resume_Water_Music
+      guid: b743159072b25640be497fd3e53494b4
+      id: 2792772864
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Water Music
+        ObjectType: 4
+      - ElementName: Resume_Water_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Water Music\Resume_Water_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: SFX
+      guid: 6022e2a8d6e7df49a11cd02dc7bbb937
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      Path: Default Work Unit\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Fishing_Music
+      guid: 9e48a6dfe18d4a4a902c3209bc758805
+      id: 279003002
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Fishing Music
+        ObjectType: 4
+      - ElementName: Stop_Fishing_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Fishing Music\Stop_Fishing_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Gorbage_Music
+      guid: 8c0556f028be2b4c97360a0b8279ec83
+      id: 3385706007
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Gorbage Music
+        ObjectType: 4
+      - ElementName: Stop_Gorbage_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Gorbage Music\Stop_Gorbage_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Water_Music
+      guid: d5ea0965438233448d728b75571cbb91
+      id: 3495434681
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Water Music
+        ObjectType: 4
+      - ElementName: Stop_Water_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Water Music\Stop_Water_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Water Music
+      guid: 5271347afc7e1d46a2981f0d43384ec1
+      id: 2066810803
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Water Music
+        ObjectType: 4
+      Path: Default Work Unit\Music\Water Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

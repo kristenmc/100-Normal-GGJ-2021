@@ -15,7 +15,7 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GameManager.Game_Manager_Instance.getMinigameActivity())
+        if(!GameManager.GameManagerInstance.getMinigameActivity())
         {
             if (Input.GetAxis("Horizontal") > 0 && rotation < 360f)
             {

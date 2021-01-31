@@ -20,13 +20,13 @@ public class ResourceBar : MonoBehaviour
     {
         if (resourceType == "Food")
         {
-            resourceNum = GameManager.Game_Manager_Instance.getFoodAmt();
-            resourceMax = GameManager.Game_Manager_Instance.getMaxFood();
+            resourceNum = GameManager.GameManagerInstance.getFoodAmt();
+            resourceMax = GameManager.GameManagerInstance.getMaxFood();
         }
         if (resourceType == "Water")
         {
-            resourceNum = GameManager.Game_Manager_Instance.getWaterAmt();
-            resourceMax = GameManager.Game_Manager_Instance.getMaxWater();
+            resourceNum = GameManager.GameManagerInstance.getWaterAmt();
+            resourceMax = GameManager.GameManagerInstance.getMaxWater();
         }
         Foodbar.fillAmount = resourceNum / resourceMax;
     }

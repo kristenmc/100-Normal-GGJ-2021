@@ -6,20 +6,10 @@ using UnityEngine;
 public enum InteractType {Food, Water, Gorbage, Shop, Animal}
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Game_Manager_Instance;
+    public static GameManager GameManagerInstance;
 
     [SerializeField] GameObject earth;
 
-    #region Global Events
-    //public event Action onInteractActivate;
-    /*public void interactActivate()
-    {
-        if(onInteractActivate != null)
-        {
-            onInteractActivate();
-        }
-    }*/
-    #endregion
 
     #region Procedural Generation Vars
     [SerializeField] GameObject foodMinigamePrefab;
@@ -65,7 +55,7 @@ public class GameManager : MonoBehaviour
     #endregion
     void Awake()
     {
-        Game_Manager_Instance = this;
+        GameManagerInstance = this;
         currentNodeConnections = currentNode.GetComponent<NodeConnection>().getConnections();
         generateMinimap();
         updateMapPointer();

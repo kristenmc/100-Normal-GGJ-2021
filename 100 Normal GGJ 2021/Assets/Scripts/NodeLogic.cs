@@ -21,27 +21,27 @@ public class NodeLogic : MonoBehaviour
 
     public void nodeClick()
     {
-        foreach (GameObject node in GameManager.Game_Manager_Instance.getCurrentNodeConnections())
+        foreach (GameObject node in GameManager.GameManagerInstance.getCurrentNodeConnections())
         {
             if (node == transform.parent.gameObject && !alreadyExplored)
             {
-                GameManager.Game_Manager_Instance.spawnInteractables(generationWeights[0], 
+                GameManager.GameManagerInstance.spawnInteractables(generationWeights[0], 
                     generationWeights[1], 
                     generationWeights[2], 
                     generationWeights[3], 
                     generationWeights[4], 
                     pity);
-                GameManager.Game_Manager_Instance.setSelectedNode(gameObject);
-                GameManager.Game_Manager_Instance.setSelectedNodeConnections(connections);
+                GameManager.GameManagerInstance.setSelectedNode(gameObject);
+                GameManager.GameManagerInstance.setSelectedNodeConnections(connections);
                 alreadyExplored = true;
                 Debug.Log("Generated" + pity + "type Interactables with the Following Weights: \n Food: " + generationWeights[0] + 
                     "\n Water: " + generationWeights[1] + 
                     "\n Gorbage: " + generationWeights[2] +
                     "\n Shop: " + generationWeights[3] +
                     "\n Animal: " + generationWeights[4]);
-                GameManager.Game_Manager_Instance.resetEarthRotation();
-                GameManager.Game_Manager_Instance.closeMap();
-                GameManager.Game_Manager_Instance.setMinigameActivity(false);
+                GameManager.GameManagerInstance.resetEarthRotation();
+                GameManager.GameManagerInstance.closeMap();
+                GameManager.GameManagerInstance.setMinigameActivity(false);
             }
         }
     }

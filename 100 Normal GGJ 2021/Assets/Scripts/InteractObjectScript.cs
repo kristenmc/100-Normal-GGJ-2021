@@ -20,6 +20,6 @@ public class InteractObjectScript : MonoBehaviour
     public void activate()
     {
         canvasToOpen.SetActive(true);
-        GameManager.Game_Manager_Instance.setMinigameActivity(true);
+        GameManager.GameManagerInstance.setMinigameActivity(true);
     }
 }

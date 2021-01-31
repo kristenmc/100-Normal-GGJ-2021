@@ -20,9 +20,9 @@ public class ExitObjectScript : MonoBehaviour
     public void activate()
     {
         canvasToOpen.SetActive(true);
-        GameManager.Game_Manager_Instance.setMinigameActivity(true);
-        GameManager.Game_Manager_Instance.setCurrentNode(GameManager.Game_Manager_Instance.getSelectedNode());
-        GameManager.Game_Manager_Instance.setCurrentNodeConnections(GameManager.Game_Manager_Instance.getSelectedNodeConnections());
-        GameManager.Game_Manager_Instance.updateMapPointer();
+        GameManager.GameManagerInstance.setMinigameActivity(true);
+        GameManager.GameManagerInstance.setCurrentNode(GameManager.GameManagerInstance.getSelectedNode());
+        GameManager.GameManagerInstance.setCurrentNodeConnections(GameManager.GameManagerInstance.getSelectedNodeConnections());
+        GameManager.GameManagerInstance.updateMapPointer();
     }
 }
