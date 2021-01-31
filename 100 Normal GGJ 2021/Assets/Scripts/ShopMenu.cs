@@ -63,6 +63,9 @@ public class ShopMenu : MonoBehaviour
         Text newTextObject = newGameObject.AddComponent<Text>();
         // Set the fontSize larger
         newTextObject.fontSize = 50;
+
+        newTextObject.color = Color.black;
+
         // Set the text from new story block
         newTextObject.text = getNextStoryBlock();
 

@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5fae626e10ae3146a83448e543c8f14c
     GuidInternal: 
-    m_lastTime: -8585894809162366108
+    m_lastTime: -8585894770157074413
     List:
     - name: Main
       guid: 956fa0284a460d40bdb804f883bf17cd
@@ -68,8 +68,22 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: bcdbade782bb83499eca6636e2bb1a5a
     GuidInternal: 
-    m_lastTime: -8585894789727003722
+    m_lastTime: -8585894770159438382
     List:
+    - name: Fishing
+      guid: d9a300a811871c4b8a158d7f920c361c
+      id: 3188984297
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      Path: Default Work Unit\SFX\Fishing
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Fishing Music
       guid: 699cee4059c59e4b96db10951169bf44
       id: 3592846184
@@ -198,9 +212,11 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
       - ElementName: Play_Claw_Swipe
         ObjectType: 3
-      Path: Default Work Unit\SFX\Play_Claw_Swipe
+      Path: Default Work Unit\SFX\Fishing\Play_Claw_Swipe
       maxAttenuation: 0
       maxDuration: 0.201927
       minDuration: 0.201927
@@ -212,9 +228,11 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
       - ElementName: Play_Fish_Caught
         ObjectType: 3
-      Path: Default Work Unit\SFX\Play_Fish_Caught
+      Path: Default Work Unit\SFX\Fishing\Play_Fish_Caught
       maxAttenuation: 0
       maxDuration: 0.744785
       minDuration: 0.744785
@@ -226,9 +244,11 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
       - ElementName: Play_Fish_Spawn
         ObjectType: 3
-      Path: Default Work Unit\SFX\Play_Fish_Spawn
+      Path: Default Work Unit\SFX\Fishing\Play_Fish_Spawn
       maxAttenuation: 0
       maxDuration: 0.278844
       minDuration: 0.278844
@@ -240,9 +260,11 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
       - ElementName: Play_Fish3_Cues
         ObjectType: 3
-      Path: Default Work Unit\SFX\Play_Fish3_Cues
+      Path: Default Work Unit\SFX\Fishing\Play_Fish3_Cues
       maxAttenuation: 0
       maxDuration: 0.120181
       minDuration: 0.120181
@@ -254,9 +276,11 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
       - ElementName: Play_Fish4_Cues
         ObjectType: 3
-      Path: Default Work Unit\SFX\Play_Fish4_Cues
+      Path: Default Work Unit\SFX\Fishing\Play_Fish4_Cues
       maxAttenuation: 0
       maxDuration: 0.120181
       minDuration: 0.120181
@@ -268,9 +292,11 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SFX
         ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
       - ElementName: Play_Fish5_Cues
         ObjectType: 3
-      Path: Default Work Unit\SFX\Play_Fish5_Cues
+      Path: Default Work Unit\SFX\Fishing\Play_Fish5_Cues
       maxAttenuation: 0
       maxDuration: 0.120181
       minDuration: 0.120181
@@ -306,6 +332,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 39.455643
       minDuration: 39.455643
+    - name: Play_Miss
+      guid: 25133bf61d59a749bd9c4fb022608dd1
+      id: 1631400290
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Play_Miss
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Play_Miss
+      maxAttenuation: 0
+      maxDuration: 0.472494
+      minDuration: 0.472494
     - name: Play_Shop_Music
       guid: 50e1a005c80379419f3c8bf28bc87513
       id: 186839574
