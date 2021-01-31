@@ -10,9 +10,7 @@ VAR haveGorbage = true
 ===items==
 {-checkTrue(haveGorbage):
         {~non-gorbage things!|Things you want?|Let's trade!} 
-        +[Food - 1] ->food 
-        +[Water - 1] ->water
-        +[Water Purifier - 1] ->water_purifier
+        +[Food and Water - 1] ->food 
         +[Net - 1] -> net
         +[Metal Detector - 1] ->metal_detector
     -else:
@@ -22,28 +20,22 @@ VAR haveGorbage = true
 
 ==food==
 #food
-You gained some food! 
+Here's some food and water! 
     +[Yay!] ->thanks
-
-==water==
-#water
-You gained some water! 
-    +[Yay!] ->thanks
-
 
 ==water_purifier==
 #water_purifier
-You gained a water purifier, increasing your water yeild!
+You gained a water purifier, it increasing your water yield!
         +[Yay!] ->thanks
 
 ==net==
 #net
-You gained a net, increasing your food yeild!
+Here's a net, it increases your resource yield!
     +[Yay!] ->thanks
 
 ==metal_detector==
 #metal_detector
-you gained a metal detector, increasing your gorbage yeild!
+Here's a metal detector, it increases your gorbage yield!
     +[Yay!] ->thanks
 
 

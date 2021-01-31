@@ -42,6 +42,7 @@ public class FishMinigameManager : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
+            AkSoundEngine.PostEvent("Play_Claw_Swipe", gameObject);
             if(MiniGameManager.MiniGameManagerInstance.isOnBeat())
             {
                 if (timeBeforeClick <= MiniGameManager.MiniGameManagerInstance.getLeeway() && timeBeforeClick >= -MiniGameManager.MiniGameManagerInstance.getLeeway())
@@ -49,6 +50,7 @@ public class FishMinigameManager : MonoBehaviour
                     //add a fish
                     if(fishGettable)
                     {
+                        AkSoundEngine.PostEvent("Play_Fish_Caught", gameObject);
                         int tempfish = 1;
                         for(int i = 0; i < GameManager.GameManagerInstance.getNetsAmt(); i++)
                         {
@@ -66,6 +68,7 @@ public class FishMinigameManager : MonoBehaviour
                     }
                     else
                     {
+                        AkSoundEngine.PostEvent("Play_Miss", gameObject);
                         Debug.Log("Missed the Fish");
                     }
                 }
@@ -96,6 +99,7 @@ public class FishMinigameManager : MonoBehaviour
         //spawn fish 3
         if(currentBeatMapInt == 3)
         {
+            AkSoundEngine.PostEvent("Play_Fish_Spawn", gameObject);
             countFishThree = true;
             fishCounter = 0;
             fishThree.SetActive(true);
@@ -110,6 +114,7 @@ public class FishMinigameManager : MonoBehaviour
         //spawn fish 4
         else if (currentBeatMapInt == 4)
         {
+            AkSoundEngine.PostEvent("Play_Fish_Spawn", gameObject);
             countFishFour = true;
             fishCounter = 0;
             fishThree.SetActive(false);
@@ -124,6 +129,7 @@ public class FishMinigameManager : MonoBehaviour
         //spawn fish 5
         else if (currentBeatMapInt == 5)
         {
+            AkSoundEngine.PostEvent("Play_Fish_Spawn", gameObject);
             countFishFive = true;
             fishCounter = 0;
             fishThree.SetActive(false);
@@ -141,6 +147,7 @@ public class FishMinigameManager : MonoBehaviour
             //fish 3 movement
             if(countFishThree)
             {
+                AkSoundEngine.PostEvent("Play_Fish3_Cues", gameObject);
                 fishThree.GetComponent<RectTransform>().localPosition = pathThree[fishCounter].GetComponent<RectTransform>().localPosition;
                 fishCounter++;
                 timeBeforeClick = 60f / 120f * (pathThree.Length + 1f - fishCounter);
@@ -148,6 +155,7 @@ public class FishMinigameManager : MonoBehaviour
             //fish 4 movement
             else if(countFishFour)
             {
+                AkSoundEngine.PostEvent("Play_Fish4_Cues", gameObject);
                 fishFour.GetComponent<RectTransform>().localPosition = pathFour[fishCounter].GetComponent<RectTransform>().localPosition;
                 fishCounter++;
                 timeBeforeClick = 60f / 120f * (pathFour.Length + 1f - fishCounter);
@@ -155,6 +163,7 @@ public class FishMinigameManager : MonoBehaviour
             //fish 5 movement
             else if(countFishFive)
             {
+                AkSoundEngine.PostEvent("Play_Fish5_Cues", gameObject);
                 fishFive.GetComponent<RectTransform>().localPosition = pathFive[fishCounter].GetComponent<RectTransform>().localPosition;
                 fishCounter++;
                 timeBeforeClick = 60f / 120f * (pathFive.Length + 1f - fishCounter);
@@ -165,14 +174,17 @@ public class FishMinigameManager : MonoBehaviour
         {
             if(countFishThree)
             {
+                AkSoundEngine.PostEvent("Play_Fish3_Cues", gameObject);
                 fishThree.GetComponent<RectTransform>().position = reticle.GetComponent<RectTransform>().position;
             }
             else if(countFishFour)
             {
+                AkSoundEngine.PostEvent("Play_Fish4_Cues", gameObject);
                 fishFour.GetComponent<RectTransform>().position = reticle.GetComponent<RectTransform>().position;
             }
             else if (countFishFive)
             {
+                AkSoundEngine.PostEvent("Play_Fish5_Cues", gameObject);
                 fishFive.GetComponent<RectTransform>().position = reticle.GetComponent<RectTransform>().position;
             }
             timeBeforeClick = 0f;

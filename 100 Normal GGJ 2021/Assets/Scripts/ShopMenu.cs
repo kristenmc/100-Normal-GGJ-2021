@@ -9,7 +9,8 @@ using Ink.Runtime;
 /// Moddifed version of code found at https://videlais.com/2019/07/10/unity-ink-part-4-tags-and-rich-text/ by  Dan Cox 
 /// This code takes the ink files and displays them onto a canvas while also making choices avaiable as buttons (better explained at the link)
 /// this moddifed verison add some code that continues looking through the ink file as long as the story can continue but no
-/// text was found, so it refreshes again to see to capture the next text
+/// text was found, so it refreshes again to see to capture the next text. This also can change some of the resoures that are controlled by 
+/// the gameManager, increaseing purchased resource and decreases gorbage (money). 
 /// </summary>
 
 
@@ -17,7 +18,9 @@ using Ink.Runtime;
 public class ShopMenu : MonoBehaviour
 {
     [SerializeField] TextAsset inkJSONAsset;
+    
     private Story story;
+    
     [SerializeField] Button buttonPrefab;
 
     [SerializeField] Image background;
@@ -40,7 +43,6 @@ public class ShopMenu : MonoBehaviour
 
         // Start the refresh cycle
         refresh();
-
     }
 
     // Refresh the UI elements
@@ -61,6 +63,9 @@ public class ShopMenu : MonoBehaviour
         Text newTextObject = newGameObject.AddComponent<Text>();
         // Set the fontSize larger
         newTextObject.fontSize = 50;
+
+        newTextObject.color = Color.black;
+
         // Set the text from new story block
         newTextObject.text = getNextStoryBlock();
 
@@ -159,16 +164,19 @@ public class ShopMenu : MonoBehaviour
                 gameManager.changeGorbage(-resourcePrice);
                 gameManager.changeWater(resourceGained);
             }
+            //adds ti tge water purifier stat increaseing player yield
             else if (tags[0] == "water_purifier")
             {
                 gameManager.changePurifierAmt(upgradeGained);
                 gameManager.changeGorbage(-upgradePrice);
             }
+            //adds to the net stat increaseing player yield
             else if (tags[0] == "net")
             {
                 gameManager.changeNetsAmt(upgradeGained);
                 gameManager.changeGorbage(-upgradePrice);
             }
+            //adds to the metal detector stat increaseing player yield 
             else if (tags[0] == "metal_detector")
             {
                 gameManager.changeDetectorAmt(upgradeGained);
@@ -181,4 +189,10 @@ public class ShopMenu : MonoBehaviour
             }
         }
     }
+
+    void startShop ()
+    {
+        this.GetComponent<Canvas>().enabled = true;
+    }
+
 }

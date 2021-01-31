@@ -233,9 +233,206 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Walk Music" ID="{C103D8AF-A8BA-4628-AD0F-8955B8216931}" ShortID="928398324">
+							<ChildrenList>
+								<Event Name="Resume_Walk_Music" ID="{3CD6C7EC-B467-43FD-AE04-DCE03D96003A}">
+									<ChildrenList>
+										<Action Name="" ID="{357F4298-0A7D-4DBC-871A-C71AEFC38E1E}" ShortID="740775954">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Walk_Music" ID="{84FB72FC-EA1B-43B1-B517-4FE6E728213B}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Walk_Music" ID="{4F15EAC0-21A5-417A-8B1D-8AA4A54F606E}">
+									<ChildrenList>
+										<Action Name="" ID="{85C7D741-6164-47E6-BCCE-A370C2E60E62}" ShortID="748879747">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Walk_Music" ID="{84FB72FC-EA1B-43B1-B517-4FE6E728213B}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pause_Walk_Music" ID="{D343BEF2-8D80-4922-9CA8-1230DAA96C82}">
+									<ChildrenList>
+										<Action Name="" ID="{6CAAE72B-E557-4256-A80B-37AC6F1ECA11}" ShortID="129503110">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Walk_Music" ID="{84FB72FC-EA1B-43B1-B517-4FE6E728213B}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Walk_Music" ID="{B9C7F9DE-F522-4C23-ADC0-B9ADC7DBEB87}">
+									<ChildrenList>
+										<Action Name="" ID="{B4232700-2AC6-4B65-8146-59693128A67C}" ShortID="260681889">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Walk_Music" ID="{84FB72FC-EA1B-43B1-B517-4FE6E728213B}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="SFX" ID="{A8E22260-E7D6-49DF-A11C-D02DC7BBB937}" ShortID="235616933"/>
+				<Folder Name="SFX" ID="{A8E22260-E7D6-49DF-A11C-D02DC7BBB937}" ShortID="235616933">
+					<ChildrenList>
+						<Event Name="Play_Miss" ID="{F63B1325-591D-49A7-BD9C-4FB022608DD1}">
+							<ChildrenList>
+								<Action Name="" ID="{FFB67097-2037-411D-AB86-939DE87AE32F}" ShortID="260685746">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Miss" ID="{128078F8-F3AC-47EE-AF29-2DE3DAFE46CC}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="Fishing" ID="{A800A3D9-8711-4B1C-8A15-8D7F920C361C}" ShortID="33350588">
+							<ChildrenList>
+								<Event Name="Play_Fish5_Cues" ID="{F468CCE8-EB2F-4F78-B1CC-C3ACDED75AD4}">
+									<ChildrenList>
+										<Action Name="" ID="{92D021C4-1EE2-407A-9BBC-B80A3EB2EF65}" ShortID="229861832">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fish5_Cues" ID="{C21FC355-FA40-45E0-AD37-EE5D83BE231B}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Fish_Spawn" ID="{BDED31D5-8C1A-4987-95CA-D72030E53B11}">
+									<ChildrenList>
+										<Action Name="" ID="{E1BB19DB-C275-4956-B7F4-0F23452BA7E1}" ShortID="197927657">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fish_Spawn" ID="{0AD2FC84-6AD7-48CE-B9EB-D8A9597B1251}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Claw_Swipe" ID="{6F4BB650-599D-4BB2-A9CF-A56AFB6B1077}">
+									<ChildrenList>
+										<Action Name="" ID="{DEBEAE2F-0A63-4BE8-B20E-C418A7097A6C}" ShortID="949119529">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Claw_Swipe" ID="{D7D15942-7AB5-4F45-9845-DE11B4624F4C}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Fish3_Cues" ID="{9DDC0E5D-AD77-423C-A3ED-501027271926}">
+									<ChildrenList>
+										<Action Name="" ID="{676C384F-0CC8-4741-B51C-2102CE1D54B3}" ShortID="745064319">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fish3_Cues" ID="{36F33631-024E-4D97-A62D-40B85EB5FC74}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Fish_Caught" ID="{282991E8-FC6D-4E81-87DD-BC97A168B3B1}">
+									<ChildrenList>
+										<Action Name="" ID="{A0D80817-98F6-49E1-B050-279032BA0354}" ShortID="361111367">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fish_Caught" ID="{5E3671F4-84F5-4BE9-B54F-28353A767218}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Fish4_Cues" ID="{2CB56363-4AF5-4518-BC56-F95EF239B066}">
+									<ChildrenList>
+										<Action Name="" ID="{8C50C639-5DA4-40AA-A7CF-94751DBCE936}" ShortID="219805563">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fish4_Cues" ID="{3082464E-1BDB-4BB9-9FA0-013AFB1F549E}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Gorbage" ID="{62CDADF2-CE3A-4240-A340-613850E9486A}" ShortID="250093229">
+							<ChildrenList>
+								<Event Name="Play_Garbage_Fall" ID="{FE102F89-5081-4482-B111-F03CE447306B}">
+									<ChildrenList>
+										<Action Name="" ID="{DCB738AA-02AC-455A-92A3-47E154FB3EE5}" ShortID="411817538">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Garbage_Fall" ID="{FD75C0BB-E939-4CA4-90FC-A18342647642}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Garbage_Punch" ID="{302E84A3-AA17-4602-B6BC-3C263D42454B}">
+									<ChildrenList>
+										<Action Name="" ID="{DA243EAC-9392-4FDD-BA4B-E18757ACB0DC}" ShortID="871730256">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Garbage_Punch" ID="{8C29C0E0-8D22-47D1-968B-9D459A475A5F}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Water" ID="{9E438975-70C5-4732-98BA-3437887E85CD}" ShortID="1026756685"/>
+						<Event Name="Stop_Ocean" ID="{9CA17062-32CC-41A8-8AEC-92F5C084DFE6}">
+							<ChildrenList>
+								<Action Name="" ID="{9F3F1DD1-BE51-4E30-907F-76418C88D060}" ShortID="385174560">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ocean" ID="{D393BC2A-A8A2-43E8-83F3-ECBB7877C3F7}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Ocean" ID="{F2899183-A1B9-47C4-BE9E-B66AC810C8A3}">
+							<ChildrenList>
+								<Action Name="" ID="{073B8C54-A67B-493C-B910-7626B66B7993}" ShortID="828820590">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ocean" ID="{D393BC2A-A8A2-43E8-83F3-ECBB7877C3F7}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

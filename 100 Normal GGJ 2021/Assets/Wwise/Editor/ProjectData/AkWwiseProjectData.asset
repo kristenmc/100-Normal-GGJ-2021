@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5fae626e10ae3146a83448e543c8f14c
     GuidInternal: 
-    m_lastTime: -8585895445181639612
+    m_lastTime: -8585894770157074413
     List:
     - name: Main
       guid: 956fa0284a460d40bdb804f883bf17cd
@@ -68,8 +68,22 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: bcdbade782bb83499eca6636e2bb1a5a
     GuidInternal: 
-    m_lastTime: -8585895407948738443
+    m_lastTime: -8585894770159438382
     List:
+    - name: Fishing
+      guid: d9a300a811871c4b8a158d7f920c361c
+      id: 3188984297
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      Path: Default Work Unit\SFX\Fishing
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Fishing Music
       guid: 699cee4059c59e4b96db10951169bf44
       id: 3592846184
@@ -158,6 +172,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Pause_Walk_Music
+      guid: f2be43d3808d22499ca81230daa96c82
+      id: 1045901827
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Walk Music
+        ObjectType: 4
+      - ElementName: Pause_Walk_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Walk Music\Pause_Walk_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Pause_Water_Music
       guid: 21ca7a1312f5804792dba35fb1d3b881
       id: 3048328929
@@ -174,6 +204,102 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Claw_Swipe
+      guid: 50b64b6f9d59b24ba9cfa56afb6b1077
+      id: 4145050892
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      - ElementName: Play_Claw_Swipe
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Fishing\Play_Claw_Swipe
+      maxAttenuation: 0
+      maxDuration: 0.201927
+      minDuration: 0.201927
+    - name: Play_Fish_Caught
+      guid: e89129286dfc814e87ddbc97a168b3b1
+      id: 3785731807
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      - ElementName: Play_Fish_Caught
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Fishing\Play_Fish_Caught
+      maxAttenuation: 0
+      maxDuration: 0.744785
+      minDuration: 0.744785
+    - name: Play_Fish_Spawn
+      guid: d531edbd1a8c874995cad72030e53b11
+      id: 1651012112
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      - ElementName: Play_Fish_Spawn
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Fishing\Play_Fish_Spawn
+      maxAttenuation: 0
+      maxDuration: 0.278844
+      minDuration: 0.278844
+    - name: Play_Fish3_Cues
+      guid: 5d0edc9d77ad3c42a3ed501027271926
+      id: 3476210678
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      - ElementName: Play_Fish3_Cues
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Fishing\Play_Fish3_Cues
+      maxAttenuation: 0
+      maxDuration: 0.120181
+      minDuration: 0.120181
+    - name: Play_Fish4_Cues
+      guid: 6363b52cf54a1845bc56f95ef239b066
+      id: 542586415
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      - ElementName: Play_Fish4_Cues
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Fishing\Play_Fish4_Cues
+      maxAttenuation: 0
+      maxDuration: 0.120181
+      minDuration: 0.120181
+    - name: Play_Fish5_Cues
+      guid: e8cc68f42feb784fb1ccc3acded75ad4
+      id: 611918528
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      - ElementName: Play_Fish5_Cues
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Fishing\Play_Fish5_Cues
+      maxAttenuation: 0
+      maxDuration: 0.120181
+      minDuration: 0.120181
     - name: Play_Fishing_Music
       guid: f685385468b5334a861f0f122ea13ef0
       id: 3207147996
@@ -206,6 +332,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 39.455643
       minDuration: 39.455643
+    - name: Play_Miss
+      guid: 25133bf61d59a749bd9c4fb022608dd1
+      id: 1631400290
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Play_Miss
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Play_Miss
+      maxAttenuation: 0
+      maxDuration: 0.472494
+      minDuration: 0.472494
     - name: Play_Shop_Music
       guid: 50e1a005c80379419f3c8bf28bc87513
       id: 186839574
@@ -219,6 +359,22 @@ MonoBehaviour:
       - ElementName: Play_Shop_Music
         ObjectType: 3
       Path: Default Work Unit\Music\Shop Music\Play_Shop_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Walk_Music
+      guid: c0ea154fa5217a418b1d8aa4a54f606e
+      id: 2449179153
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Walk Music
+        ObjectType: 4
+      - ElementName: Play_Walk_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Walk Music\Play_Walk_Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -283,6 +439,22 @@ MonoBehaviour:
       - ElementName: Resume_Shop_Music
         ObjectType: 3
       Path: Default Work Unit\Music\Shop Music\Resume_Shop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Resume_Walk_Music
+      guid: ecc7d63c67b4fd43ae04dce03d96003a
+      id: 2857380544
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Walk Music
+        ObjectType: 4
+      - ElementName: Resume_Walk_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Walk Music\Resume_Walk_Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -376,6 +548,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Walk_Music
+      guid: def9c7b922f5234cadc0b9adc7dbeb87
+      id: 3023653035
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Walk Music
+        ObjectType: 4
+      - ElementName: Stop_Walk_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Walk Music\Stop_Walk_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Water_Music
       guid: d5ea0965438233448d728b75571cbb91
       id: 3495434681
@@ -392,6 +580,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Walk Music
+      guid: afd803c1baa82846ad0f8955b8216931
+      id: 2800707351
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Walk Music
+        ObjectType: 4
+      Path: Default Work Unit\Music\Walk Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Water Music
       guid: 5271347afc7e1d46a2981f0d43384ec1
       id: 2066810803
