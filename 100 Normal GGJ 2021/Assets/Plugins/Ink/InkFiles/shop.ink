@@ -1,5 +1,5 @@
 VAR haveGorbage = true
--> intro 
+-> enter 
 ===intro==
 #check_gorbage
     Gimmie da gorbage! 
@@ -35,14 +35,18 @@ You gained some water!
     No gorbage, No item!
     +[Return]->intro
     +[Exit] -> leave
-    
+
+===enter==
+Welcome to Trash Pandas!
++[enter] ->intro
+
 ===leave==
     Bring back more gorbage!
-    +[Bye!]->exit
+    +[Bye!]->bye
 
-===exit==
+===bye==
 #end
-->DONE
+->enter
 
 === function checkTrue(bool) ===
     ~return bool == true 

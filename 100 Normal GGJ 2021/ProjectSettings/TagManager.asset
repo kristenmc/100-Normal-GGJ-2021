@@ -7,6 +7,7 @@ TagManager:
   - Gorbage
   - Exit
   - Interactable
+  - shop_UI
   layers:
   - Default
   - TransparentFX
