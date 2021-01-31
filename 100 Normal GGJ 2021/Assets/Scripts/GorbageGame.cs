@@ -130,6 +130,7 @@ public class GorbageGame : MonoBehaviour
                             }
                             gorbageCount += tempGorbage;
                             textCounterGorbage.updateText(gorbageCount);
+                            GameManager.GameManagerInstance.changeGorbage(tempGorbage);
                         }
                         else if (!isGorbage)
                         {
@@ -137,6 +138,7 @@ public class GorbageGame : MonoBehaviour
                             gorbageCount--;
                             textCounterGorbage.updateText(gorbageCount);
                             selectedGarbage.GetComponent<Image>().color = new Color(255, 0, 0, 100);
+                            GameManager.GameManagerInstance.changeGorbage(-1);
                             //mistake notification
                         }
                     }

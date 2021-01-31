@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d273438f8e5a50458bda682b9ec14669
     GuidInternal: 
-    m_lastTime: -8585896274702144079
+    m_lastTime: -8585894701952478601
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -41,6 +41,28 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
       Path: Default Work Unit\Master Audio Bus
+    - name: Muisc Bus
+      guid: 56e3b5abf8ddf34ebc98681247ea0726
+      id: 2791643588
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Muisc Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Muisc Bus
+    - name: SFX Bus
+      guid: 8b39f3c32924a9489b6b82f12dd3d902
+      id: 1502772432
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: SFX Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\SFX Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -704,8 +726,35 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 137581ae13f5874a8dbf3df5d91bf5e2
     GuidInternal: 
-    m_lastTime: -8585896274702154055
-    List: []
+    m_lastTime: -8585894701953525805
+    List:
+    - name: MasterVolume
+      guid: 30ca4dad6985714d94b28d1553e94bb6
+      id: 2918011349
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MasterVolume
+        ObjectType: 13
+      Path: Default Work Unit\MasterVolume
+    - name: MusicVolume
+      guid: b3f746b0a9f13a469f2150444aa7b5a4
+      id: 2346531308
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MusicVolume
+        ObjectType: 13
+      Path: Default Work Unit\MusicVolume
+    - name: SFXVolume
+      guid: 7131e9823e3be642b94519e81c12e32f
+      id: 988953028
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFXVolume
+        ObjectType: 13
+      Path: Default Work Unit\SFXVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
