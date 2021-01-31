@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,19 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Game_Manager_Instance;
 
+    [SerializeField] GameObject earth;
+
+    #region Global Events
+    //public event Action onInteractActivate;
+    /*public void interactActivate()
+    {
+        if(onInteractActivate != null)
+        {
+            onInteractActivate();
+        }
+    }*/
+    #endregion
+
     #region Procedural Generation Vars
     [SerializeField] GameObject foodMinigamePrefab;
     [SerializeField] GameObject waterMinigamePrefab;
@@ -14,12 +28,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject shopPrefab;
     [SerializeField] GameObject animalPrefab;
     [SerializeField] GameObject[] interactParents;
-    [SerializeField] GameObject[] interactGameObjects; 
-    private int numGeneratedFood = 0;
-    private int numGeneratedWater = 0;
-    private int numGeneratedGorbage = 0;
-    private int numGeneratedShop = 0;
-    private int numGeneratedAnimals = 0;
+    [SerializeField] GameObject[] interactGameObjects;
+    [SerializeField] GameObject foodNodePrefab;
+    [SerializeField] GameObject waterNodePrefab;
+    [SerializeField] GameObject gorbageNodePrefab;
+    [SerializeField] GameObject shopNodePrefab;
+    [SerializeField] GameObject animalNodePrefab;
+    [SerializeField] GameObject[] mapNodeParents;
+    [SerializeField] float[] nodeWeights;
+    [SerializeField] int numGeneratedFood = 0;
+    [SerializeField] int numGeneratedWater = 0;
+    [SerializeField] int numGeneratedGorbage = 0;
+    [SerializeField] int numGeneratedShop = 0;
+    [SerializeField] int numGeneratedAnimals = 0;
     #endregion
 
     #region Management Vars
@@ -39,10 +60,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject selectedNode;
     [SerializeField] GameObject[] currentNodeConnections;
     [SerializeField] GameObject[] selectedNodeConnections;
+    [SerializeField] GameObject mapCanvas;
+    [SerializeField] GameObject mapPointer;
     #endregion
     void Awake()
     {
         Game_Manager_Instance = this;
+        currentNodeConnections = currentNode.GetComponent<NodeConnection>().getConnections();
+        generateMinimap();
+        updateMapPointer();
     }
 
     #region Generation Funcs
@@ -97,7 +123,7 @@ public class GameManager : MonoBehaviour
     
     public void generateInteractable(float foodWeight, float waterWeight, float gorbageWeight, float shopWeight, float animalWeight, int iterator)
     {
-        float randomlyGeneratedNumber = Random.Range(0.0f, animalWeight);
+        float randomlyGeneratedNumber = UnityEngine.Random.Range(0.0f, animalWeight);
         if (randomlyGeneratedNumber <= foodWeight)
         {
             numGeneratedFood++;
@@ -122,6 +148,40 @@ public class GameManager : MonoBehaviour
         {
             numGeneratedAnimals++;
             interactGameObjects[iterator] = Instantiate(animalPrefab, interactParents[iterator].transform);
+        }
+    }
+    
+    public void generateMinimap()
+    {
+        foreach(GameObject node in mapNodeParents)
+        {
+            GameObject tempNode;
+            float randomlyGeneratedNumber = UnityEngine.Random.Range(0.0f, nodeWeights[4]);
+            if(randomlyGeneratedNumber <= nodeWeights[0])
+            {
+                tempNode = Instantiate(foodNodePrefab, node.transform);
+            }
+            else if(randomlyGeneratedNumber <= nodeWeights[1])
+            {
+                tempNode = Instantiate(waterNodePrefab, node.transform);
+            }
+            else if(randomlyGeneratedNumber <= nodeWeights[2])
+            {
+                tempNode = Instantiate(gorbageNodePrefab, node.transform);
+            }
+            else if(randomlyGeneratedNumber <= nodeWeights[3])
+            {
+                tempNode = Instantiate(shopNodePrefab, node.transform);
+            }
+            else
+            {
+                tempNode = Instantiate(animalNodePrefab, node.transform);
+            }
+            tempNode.GetComponent<RectTransform>().localPosition = new Vector3(
+                tempNode.GetComponent<RectTransform>().localPosition.x, 
+                tempNode.GetComponent<RectTransform>().localPosition.y, 
+                1);
+            tempNode.GetComponent<NodeLogic>().getParentConnections();
         }
     }
     #endregion
@@ -230,6 +290,30 @@ public class GameManager : MonoBehaviour
     public void setSelectedNodeConnections(GameObject[] connectionsList)
     {
         selectedNodeConnections = connectionsList;
+    }
+
+    public void resetEarthRotation()
+    {
+        earth.GetComponent<MovementScript>().resetRotation();
+    }
+    #endregion
+
+    #region Canvas Funcs
+    public void openMap()
+    {
+        mapCanvas.SetActive(true);
+    }
+    
+    public void closeMap()
+    {
+        mapCanvas.SetActive(false);
+    }
+
+    public void updateMapPointer()
+    {
+        mapPointer.GetComponent<RectTransform>().position = new Vector3(getCurrentNode().GetComponent<RectTransform>().position.x, 
+            getCurrentNode().GetComponent<RectTransform>().position.y + 125, 
+            0);
     }
     #endregion
 }

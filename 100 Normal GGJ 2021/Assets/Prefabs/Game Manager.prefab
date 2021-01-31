@@ -43,9 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7992aaa9834b4448a9fa5ee085b8ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  earth: {fileID: 0}
   foodMinigamePrefab: {fileID: 3162927470697480801, guid: c3692c87e5f118c49a2d25bffce7edce, type: 3}
-  waterMinigamePrefab: {fileID: 54401925635678796, guid: 4cf30a715cff6a84abdfe28e99b1977d, type: 3}
-  gorbageMinigamePrefab: {fileID: 6451923501035674919, guid: 8c51190f74e6e7f45baf82a13e5a6dd5, type: 3}
+  waterMinigamePrefab: {fileID: 54401925635678796, guid: 51f01d0ee3b36744784b0374d25efa63, type: 3}
+  gorbageMinigamePrefab: {fileID: 54401925635678796, guid: 4cf30a715cff6a84abdfe28e99b1977d, type: 3}
   shopPrefab: {fileID: 3842480763945188319, guid: 4405348046ab6244eaee68ca4d87e8ec, type: 3}
   animalPrefab: {fileID: 2723238391318465668, guid: 23a302e7a8d842d4c86657f840304e6d, type: 3}
   interactParents:
@@ -60,10 +61,52 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  minigameActive: 0
+  foodNodePrefab: {fileID: 6075783695286141467, guid: 0c94956eb20da1b48a6f7b46fd6f6605, type: 3}
+  waterNodePrefab: {fileID: 1350109727406832186, guid: 6124efed14028ca499866e9d3df0e1a1, type: 3}
+  gorbageNodePrefab: {fileID: 3100949102726488508, guid: 82faea8165231d84fbee46387fb0546c, type: 3}
+  shopNodePrefab: {fileID: 3422889476313756899, guid: 36517a68ca3184c46a0d04038fd71787, type: 3}
+  animalNodePrefab: {fileID: 6069697651103830547, guid: 0482bea9b10f35f4ca21b74dd09390f3, type: 3}
+  mapNodeParents:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  nodeWeights:
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 1
+  numGeneratedFood: 0
+  numGeneratedWater: 0
+  numGeneratedGorbage: 0
+  numGeneratedShop: 0
+  numGeneratedAnimals: 0
+  minigameActive: 1
   foodAmt: 0
   maxFoodAmt: 0
   waterAmt: 0
   maxWaterAmt: 0
   gorbageAmt: 0
   maxGorbageAmt: 0
+  animalAmt: 1
+  currentNode: {fileID: 0}
+  selectedNode: {fileID: 0}
+  currentNodeConnections: []
+  selectedNodeConnections: []
+  mapCanvas: {fileID: 0}
