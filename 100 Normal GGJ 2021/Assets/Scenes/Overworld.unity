@@ -1787,6 +1787,22 @@ PrefabInstance:
       propertyPath: foodBeatMapParts.Array.data[2]
       value: 010002
       objectReference: {fileID: 0}
+    - target: {fileID: 2200679668953552322, guid: b65c9ece6d0d4204ab87fa68fc2c1d3f, type: 3}
+      propertyPath: shopMusicStart.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ac34f19da4fab0c439736cfa15bdfbab, type: 2}
+    - target: {fileID: 2200679668953552322, guid: b65c9ece6d0d4204ab87fa68fc2c1d3f, type: 3}
+      propertyPath: fishingMusicStart.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 2346151b9f45b204f837be49d293867e, type: 2}
+    - target: {fileID: 2200679668953552322, guid: b65c9ece6d0d4204ab87fa68fc2c1d3f, type: 3}
+      propertyPath: gorbageMusicStart.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e57bbe09db8a96a47be4713572cbcd2f, type: 2}
+    - target: {fileID: 2200679668953552322, guid: b65c9ece6d0d4204ab87fa68fc2c1d3f, type: 3}
+      propertyPath: waterMusicStart.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a705e4ea82808b4e981c1ce5563c0bf, type: 2}
     - target: {fileID: 2779535159218661942, guid: b65c9ece6d0d4204ab87fa68fc2c1d3f, type: 3}
       propertyPath: m_Name
       value: Mini Game Manager

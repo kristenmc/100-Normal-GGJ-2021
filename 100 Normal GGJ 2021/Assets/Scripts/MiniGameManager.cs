@@ -25,6 +25,13 @@ public class MiniGameManager : MonoBehaviour
     [SerializeField] int currentBeatmapLocation = 0;
     #endregion
 
+    [SerializeField] AK.Wwise.Event shopMusicStart;
+    [SerializeField] AK.Wwise.Event walkMusicStart;
+    [SerializeField] AK.Wwise.Event fishingMusicStart;
+    [SerializeField] AK.Wwise.Event gorbageMusicStart;
+    [SerializeField] AK.Wwise.Event waterMusicStart;
+
+
     #region Global Events
     public event Action<int> onBeatCall;
     public void beatCall(int beatInt)
@@ -213,34 +220,34 @@ public class MiniGameManager : MonoBehaviour
     public void startWalkMusic()
     {
         Debug.Log("Starting Walk Music");
-        AkSoundEngine.PostEvent("Play_Walk_Music", gameObject);
+        walkMusicStart.Post(gameObject);
     }
 
     public void startFoodMusic()
     {
         Debug.Log("Starting Food Music");
-        AkSoundEngine.PostEvent("Play_Fishing_Music", gameObject);
+        fishingMusicStart.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_MusicSyncExit | (uint)AkCallbackType.AK_MusicSyncEntry, Callback_Function);
 
     }
 
     public void startWaterMusic()
     {
         Debug.Log("Starting Water Music");
-        AkSoundEngine.PostEvent("Play_Water_Music", gameObject);
+        waterMusicStart.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_MusicSyncExit | (uint)AkCallbackType.AK_MusicSyncEntry, Callback_Function);
 
     }
 
     public void startGorbageMusic()
     {
         Debug.Log("Starting Gorbage Music");
-        AkSoundEngine.PostEvent("Play_Gorbage_Music", gameObject);
+        gorbageMusicStart.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncBeat | (uint)AkCallbackType.AK_MusicSyncExit | (uint)AkCallbackType.AK_MusicSyncEntry, Callback_Function);
 
     }
 
     public void startShopMusic()
     {
         Debug.Log("Starting Shop Music");
-        AkSoundEngine.PostEvent("Start_Shop_Music", gameObject);
+        shopMusicStart.Post(gameObject);
     }
     #endregion
 }
