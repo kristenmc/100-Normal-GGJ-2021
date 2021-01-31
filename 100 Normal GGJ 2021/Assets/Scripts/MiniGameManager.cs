@@ -25,7 +25,7 @@ public class MiniGameManager : MonoBehaviour
     [SerializeField] int currentBeatmapLocation = 0;
 
     [SerializeField] int BPM;
-    [SerializeField] string currentMiniGameName;
+    [SerializeField] InteractType currentMiniGameName;
     [SerializeField] float timer;
     [SerializeField] float leeWay;
 
@@ -70,15 +70,15 @@ public class MiniGameManager : MonoBehaviour
         {
             return true;
         }
-        else if (timer >= 60 / 120 - leeWay && currentMiniGameName == "Fishing")
+        else if (timer >= 60 / 120 - leeWay && currentMiniGameName == InteractType.Food)
         {
             return true;
         }
-        else if (timer >= 60 / 132 - leeWay && currentMiniGameName == "Water")
+        else if (timer >= 60 / 132 - leeWay && currentMiniGameName == InteractType.Water)
         {
             return true;
         }
-        else if (timer >= 60 / 124 - leeWay && currentMiniGameName == "Gorbage")
+        else if (timer >= 60 / 124 - leeWay && currentMiniGameName == InteractType.Gorbage)
         {
             return true;
         }
