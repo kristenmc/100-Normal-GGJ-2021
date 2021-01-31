@@ -3,19 +3,11 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}" PersistMode="Standalone">
 			<ChildrenList>
-				<MusicPlaylistContainer Name="Fishing_Music" ID="{F3FC9A44-E09F-4790-BAB2-B16D45B84DF4}" ShortID="756583759">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Minigames" ID="{2B56C5F9-77E5-4698-BC2E-BA64539CDDF8}" ShortID="28449908">
 					<ChildrenList>
-						<MusicSegment Name="Fishing" ID="{EF9E0F4D-2F33-4A19-80FB-E661C55E499C}" ShortID="46647075">
+						<MusicPlaylistContainer Name="Gorbage_Music" ID="{EBF9402E-001B-4F51-AB6B-88F0879E951A}" ShortID="25302918">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="38005.2154195011"/>
+								<Property Name="Tempo" Type="Real64" Value="124"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -26,98 +18,98 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Fishing" ID="{7223DB0B-8F3C-4AEE-A5B4-E68893875A52}" ShortID="375323216">
+								<MusicSegment Name="Gorbage_Gathering" ID="{48DFCBEB-ADFE-4081-B71F-AD8C08AC55B5}" ShortID="99315804">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="39697.5817423744"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Fishing" ID="{ABCEEDEA-DCA7-4E8A-B1EB-5FF64572BFD7}">
-											<Language>SFX</Language>
-											<AudioFile>Fishing.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="332103486"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<MusicTrack Name="Gorbage_Gathering" ID="{A6D2423D-4415-4885-B512-4C8A7ABF72F3}" ShortID="361183266">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Gorbage_Gathering" ID="{FF6B899B-E8A6-44CE-9C7E-19E787621B7E}">
+													<Language>SFX</Language>
+													<AudioFile>Gorbage_Gathering.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="924290833"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{5D0ECF23-6541-4056-8693-D72CDF94B62A}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{D1F2D444-2000-4CBB-BFF2-04FEBED76214}">
+													<ClipList>
+														<MusicClip Name="Gorbage_Gathering" ID="{C596A5A0-2E2C-4ECC-9A9D-FE0F70CA6293}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="39455.6462585034"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Gorbage_Gathering" ID="{FF6B899B-E8A6-44CE-9C7E-19E787621B7E}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
 									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{081FD613-0FE4-4B55-BC97-8076AB0DE4AD}">
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{EE439D1B-A433-43F1-A6A8-689EE637FBA1}"/>
+										<MusicCue Name="Exit Cue" ID="{42E4975C-1004-443E-B8AA-15EEAE314817}">
 											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="36290.3225806452"/>
 											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{CE7D7613-4C81-49C4-A29A-6E335178B3E2}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{99B52D02-4AA5-426E-9250-A2E1BDB43693}">
 											<TransitionInfo/>
 										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{E22D0137-F97A-46DE-82C3-F21AC568BE09}">
-											<ClipList>
-												<MusicClip Name="Fishing" ID="{20BA0DB7-A393-4371-8F52-916C33A5FDE9}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="38005.2154195011"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="Fishing" ID="{ABCEEDEA-DCA7-4E8A-B1EB-5FF64572BFD7}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{2995A488-90C2-42AF-9063-E7EBFE77F8E1}"/>
-								<MusicCue Name="Exit Cue" ID="{5B70608C-DA59-401A-A88E-A78DE867F51C}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="37500"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-					</ChildrenList>
-					<TransitionList>
-						<MusicTransition Name="Root" ID="{34E49869-86CD-4A50-8EE6-7CDE188C6113}">
-							<PropertyList>
-								<Property Name="IsFolder" Type="bool" Value="True"/>
-							</PropertyList>
-							<ChildrenList>
-								<MusicTransition Name="Transition" ID="{C36DC22E-6E77-4FC7-A85A-6F7F36113632}">
+									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
-							</ChildrenList>
-							<TransitionInfo/>
-						</MusicTransition>
-					</TransitionList>
-					<Playlist>
-						<MusicPlaylistItem Name="" ID="{11A07F07-BD6A-4C3F-B2AB-3CC7E54206D8}" ShortID="698670855">
-							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{7B282A93-2903-42E4-B698-9D85BCE1F380}" ShortID="256512298">
-									<PropertyList>
-										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-									</PropertyList>
-									<SegmentRef Name="Fishing" ID="{EF9E0F4D-2F33-4A19-80FB-E661C55E499C}"/>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{688ECDD1-7D6E-4F77-84FD-89899A3D6D0C}" ShortID="864180141">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{95BDFF10-C78C-4098-AFB9-ED20A2E9A6B7}" ShortID="119837004">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Gorbage_Gathering" ID="{48DFCBEB-ADFE-4081-B71F-AD8C08AC55B5}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
 								</MusicPlaylistItem>
-							</ChildrenList>
-						</MusicPlaylistItem>
-					</Playlist>
-				</MusicPlaylistContainer>
-				<MusicPlaylistContainer Name="Gorbage_Music" ID="{EBF9402E-001B-4F51-AB6B-88F0879E951A}" ShortID="25302918">
-					<PropertyList>
-						<Property Name="Tempo" Type="Real64" Value="124"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<MusicSegment Name="Gorbage_Gathering" ID="{48DFCBEB-ADFE-4081-B71F-AD8C08AC55B5}" ShortID="99315804">
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Water_Music" ID="{42A3EF00-9DCC-4788-8179-1A6606E2C216}" ShortID="257049317">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="39697.5817423744"/>
+								<Property Name="Tempo" Type="Real64" Value="132"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -128,86 +120,197 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Gorbage_Gathering" ID="{A6D2423D-4415-4885-B512-4C8A7ABF72F3}" ShortID="361183266">
+								<MusicSegment Name="Water Gathering" ID="{5BF827B8-57C7-4DAC-9218-082C5EC33237}" ShortID="821289799">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="34550.1814058957"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Gorbage_Gathering" ID="{FF6B899B-E8A6-44CE-9C7E-19E787621B7E}">
-											<Language>SFX</Language>
-											<AudioFile>Gorbage_Gathering.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="924290833"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<MusicTrack Name="Water Gathering" ID="{7E98AF89-F2BB-44AC-83DF-027F74D5FEE6}" ShortID="766914639">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Water Gathering" ID="{70ECBE73-78E6-4686-BA3F-CE8E9B428ADA}">
+													<Language>SFX</Language>
+													<AudioFile>Water Gathering.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="26803223"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{1C1150F2-8338-4B3A-9C7A-C61B0B270EA0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{2EDBC033-9CBE-4C97-B880-7881B956CFA0}">
+													<ClipList>
+														<MusicClip Name="Water Gathering" ID="{61FD9F88-B706-4C04-9003-B58403100A8C}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="34550.1814058957"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Water Gathering" ID="{70ECBE73-78E6-4686-BA3F-CE8E9B428ADA}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
 									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{5D0ECF23-6541-4056-8693-D72CDF94B62A}">
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{CC4F7BD1-2AD1-424E-87AE-776C62FE3FBA}"/>
+										<MusicCue Name="Exit Cue" ID="{B72C2AFA-485C-424C-A11E-C958542076AB}">
 											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="32727.2727272727"/>
 											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{9267C963-B26F-4823-A0B8-57909DBF492C}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{D3DCFC32-8E2D-40F6-A999-BA12E20D766A}">
 											<TransitionInfo/>
 										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{D1F2D444-2000-4CBB-BFF2-04FEBED76214}">
-											<ClipList>
-												<MusicClip Name="Gorbage_Gathering" ID="{C596A5A0-2E2C-4ECC-9A9D-FE0F70CA6293}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="39455.6462585034"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="Gorbage_Gathering" ID="{FF6B899B-E8A6-44CE-9C7E-19E787621B7E}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{EE439D1B-A433-43F1-A6A8-689EE637FBA1}"/>
-								<MusicCue Name="Exit Cue" ID="{42E4975C-1004-443E-B8AA-15EEAE314817}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="36290.3225806452"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-					</ChildrenList>
-					<TransitionList>
-						<MusicTransition Name="Root" ID="{CE7D7613-4C81-49C4-A29A-6E335178B3E2}">
-							<PropertyList>
-								<Property Name="IsFolder" Type="bool" Value="True"/>
-							</PropertyList>
-							<ChildrenList>
-								<MusicTransition Name="Transition" ID="{99B52D02-4AA5-426E-9250-A2E1BDB43693}">
+									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
-							</ChildrenList>
-							<TransitionInfo/>
-						</MusicTransition>
-					</TransitionList>
-					<Playlist>
-						<MusicPlaylistItem Name="" ID="{688ECDD1-7D6E-4F77-84FD-89899A3D6D0C}" ShortID="864180141">
-							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{95BDFF10-C78C-4098-AFB9-ED20A2E9A6B7}" ShortID="119837004">
-									<PropertyList>
-										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-									</PropertyList>
-									<SegmentRef Name="Gorbage_Gathering" ID="{48DFCBEB-ADFE-4081-B71F-AD8C08AC55B5}"/>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{1917A90D-9DB8-4D65-A524-B377AA328153}" ShortID="814906371">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{3C115D27-CDD7-4482-B88A-5EB371E8D124}" ShortID="370996022">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Water Gathering" ID="{5BF827B8-57C7-4DAC-9218-082C5EC33237}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
 								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Fishing_Music" ID="{F3FC9A44-E09F-4790-BAB2-B16D45B84DF4}" ShortID="756583759">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Fishing" ID="{EF9E0F4D-2F33-4A19-80FB-E661C55E499C}" ShortID="46647075">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="38005.2154195011"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Fishing" ID="{7223DB0B-8F3C-4AEE-A5B4-E68893875A52}" ShortID="375323216">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Fishing" ID="{ABCEEDEA-DCA7-4E8A-B1EB-5FF64572BFD7}">
+													<Language>SFX</Language>
+													<AudioFile>Fishing.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="332103486"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{081FD613-0FE4-4B55-BC97-8076AB0DE4AD}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{E22D0137-F97A-46DE-82C3-F21AC568BE09}">
+													<ClipList>
+														<MusicClip Name="Fishing" ID="{20BA0DB7-A393-4371-8F52-916C33A5FDE9}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="38005.2154195011"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Fishing" ID="{ABCEEDEA-DCA7-4E8A-B1EB-5FF64572BFD7}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{2995A488-90C2-42AF-9063-E7EBFE77F8E1}"/>
+										<MusicCue Name="Exit Cue" ID="{5B70608C-DA59-401A-A88E-A78DE867F51C}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="37500"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
 							</ChildrenList>
-						</MusicPlaylistItem>
-					</Playlist>
-				</MusicPlaylistContainer>
-				<MusicPlaylistContainer Name="Water_Music" ID="{42A3EF00-9DCC-4788-8179-1A6606E2C216}" ShortID="257049317">
-					<PropertyList>
-						<Property Name="Tempo" Type="Real64" Value="132"/>
-					</PropertyList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{34E49869-86CD-4A50-8EE6-7CDE188C6113}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{C36DC22E-6E77-4FC7-A85A-6F7F36113632}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{11A07F07-BD6A-4C3F-B2AB-3CC7E54206D8}" ShortID="698670855">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{7B282A93-2903-42E4-B698-9D85BCE1F380}" ShortID="256512298">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Fishing" ID="{EF9E0F4D-2F33-4A19-80FB-E661C55E499C}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+				</Folder>
+				<MusicPlaylistContainer Name="Shop_Music" ID="{47C98709-F365-4062-93A0-6E1993966842}" ShortID="1058922468">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
@@ -217,9 +320,68 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="Water Gathering" ID="{5BF827B8-57C7-4DAC-9218-082C5EC33237}" ShortID="821289799">
+						<MusicSegment Name="Shop_Intro" ID="{9D742D91-1147-49E8-9DC9-0BC8CE94AB65}" ShortID="222733974">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Shop_Intro" ID="{EA61105B-BDED-4F26-80E8-487817731703}" ShortID="624055318">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Shop_Intro" ID="{4740C904-17EE-484A-9590-F89921BB7B09}">
+											<Language>SFX</Language>
+											<AudioFile>Shop_Intro.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="682520662"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{A52FD1D1-1F6B-426A-A2F0-B8A8A195AD7E}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{9B79261F-0FDF-464F-83AA-C5F3704D098B}">
+											<ClipList>
+												<MusicClip Name="Shop_Intro" ID="{69BD871F-F5D5-43E4-B8A3-E0ABA8E1CCDF}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="3692.31292517007"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="Shop_Intro" ID="{4740C904-17EE-484A-9590-F89921BB7B09}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{4C63FD5D-2D07-44E1-935B-78F220443042}"/>
+								<MusicCue Name="Exit Cue" ID="{4EA14226-9318-4BFA-93EB-E22B879F4CDC}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="3692.31292517007"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="Shop_Loop" ID="{90E76E5C-6335-4F0F-8DE5-16459627B0C9}" ShortID="551908700">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="34550.1814058957"/>
+								<Property Name="EndPosition" Type="Real64" Value="29538.4580498866"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -230,23 +392,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Water Gathering" ID="{7E98AF89-F2BB-44AC-83DF-027F74D5FEE6}" ShortID="766914639">
+								<MusicTrack Name="Shop_Loop" ID="{CB9BA411-7E49-454C-BF0D-9F4BFD216C6A}" ShortID="687103676">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Water Gathering" ID="{70ECBE73-78E6-4686-BA3F-CE8E9B428ADA}">
+										<AudioFileSource Name="Shop_Loop" ID="{66BAD2C8-78BD-4264-B403-AFAEBDC65B81}">
 											<Language>SFX</Language>
-											<AudioFile>Water Gathering.wav</AudioFile>
+											<AudioFile>Shop_Loop.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="26803223"/>
+												<MediaID ID="19510311"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{1C1150F2-8338-4B3A-9C7A-C61B0B270EA0}">
+										<MusicTransition Name="Root" ID="{169FD68F-D628-4517-9B25-F4001C3C7132}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -254,15 +416,15 @@
 										</MusicTransition>
 									</TransitionList>
 									<SequenceList>
-										<MusicTrackSequence Name="" ID="{2EDBC033-9CBE-4C97-B880-7881B956CFA0}">
+										<MusicTrackSequence Name="" ID="{E01BD07E-4229-4BFA-8B7B-DA93D8F6DFDC}">
 											<ClipList>
-												<MusicClip Name="Water Gathering" ID="{61FD9F88-B706-4C04-9003-B58403100A8C}">
+												<MusicClip Name="Shop_Loop" ID="{BA3B8A91-774C-4666-AFAB-AD3CEB592409}">
 													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="34550.1814058957"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="29538.4580498866"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
 														<Property Name="FadeOutMode" Type="int16" Value="0"/>
 													</PropertyList>
-													<AudioSourceRef Name="Water Gathering" ID="{70ECBE73-78E6-4686-BA3F-CE8E9B428ADA}"/>
+													<AudioSourceRef Name="Shop_Loop" ID="{66BAD2C8-78BD-4264-B403-AFAEBDC65B81}"/>
 												</MusicClip>
 											</ClipList>
 										</MusicTrackSequence>
@@ -270,23 +432,23 @@
 								</MusicTrack>
 							</ChildrenList>
 							<CueList>
-								<MusicCue Name="Entry Cue" ID="{CC4F7BD1-2AD1-424E-87AE-776C62FE3FBA}"/>
-								<MusicCue Name="Exit Cue" ID="{B72C2AFA-485C-424C-A11E-C958542076AB}">
+								<MusicCue Name="Entry Cue" ID="{96755AB5-2623-417A-A97A-0353AFF160C3}"/>
+								<MusicCue Name="Exit Cue" ID="{C5C77442-74BE-4B54-BF69-13534A8AD6A1}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="32727.2727272727"/>
+										<Property Name="TimeMs" Type="Real64" Value="29538.4580498866"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
 						</MusicSegment>
 					</ChildrenList>
 					<TransitionList>
-						<MusicTransition Name="Root" ID="{9267C963-B26F-4823-A0B8-57909DBF492C}">
+						<MusicTransition Name="Root" ID="{B51AECB2-C02C-4C83-83C8-A1CB5B702C68}">
 							<PropertyList>
 								<Property Name="IsFolder" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<MusicTransition Name="Transition" ID="{D3DCFC32-8E2D-40F6-A999-BA12E20D766A}">
+								<MusicTransition Name="Transition" ID="{BBE3E894-3DF2-4BDD-AB74-A1344E84759C}">
 									<TransitionInfo/>
 								</MusicTransition>
 							</ChildrenList>
@@ -294,13 +456,20 @@
 						</MusicTransition>
 					</TransitionList>
 					<Playlist>
-						<MusicPlaylistItem Name="" ID="{1917A90D-9DB8-4D65-A524-B377AA328153}" ShortID="814906371">
+						<MusicPlaylistItem Name="" ID="{132F0AD2-2137-4134-A7C9-7198B22B69FB}" ShortID="400850440">
 							<ChildrenList>
-								<MusicPlaylistItem Name="" ID="{3C115D27-CDD7-4482-B88A-5EB371E8D124}" ShortID="370996022">
+								<MusicPlaylistItem Name="" ID="{50816F47-C0CB-493C-AA3D-A9E540A57BB4}" ShortID="239869204">
 									<PropertyList>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>
-									<SegmentRef Name="Water Gathering" ID="{5BF827B8-57C7-4DAC-9218-082C5EC33237}"/>
+									<SegmentRef Name="Shop_Intro" ID="{9D742D91-1147-49E8-9DC9-0BC8CE94AB65}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{406E5251-F93C-4B76-BCB8-D378A3993E05}" ShortID="807500847">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Shop_Loop" ID="{90E76E5C-6335-4F0F-8DE5-16459627B0C9}"/>
 								</MusicPlaylistItem>
 							</ChildrenList>
 						</MusicPlaylistItem>

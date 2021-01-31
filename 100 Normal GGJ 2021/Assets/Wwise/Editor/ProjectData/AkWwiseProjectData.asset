@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5fae626e10ae3146a83448e543c8f14c
     GuidInternal: 
-    m_lastTime: -8585895445181639612
+    m_lastTime: -8585895465092022755
     List:
     - name: Main
       guid: 956fa0284a460d40bdb804f883bf17cd
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: bcdbade782bb83499eca6636e2bb1a5a
     GuidInternal: 
-    m_lastTime: -8585895445184382297
+    m_lastTime: -8585895418132304677
     List:
     - name: Fishing Music
       guid: 699cee4059c59e4b96db10951169bf44
@@ -142,6 +142,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Pause_Shop_Music
+      guid: f1c494ac76486f4e9361985eb0507ea5
+      id: 1037648256
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Shop Music
+        ObjectType: 4
+      - ElementName: Pause_Shop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Shop Music\Pause_Shop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Pause_Water_Music
       guid: 21ca7a1312f5804792dba35fb1d3b881
       id: 3048328929
@@ -190,6 +206,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 39.455643
       minDuration: 39.455643
+    - name: Play_Shop_Music
+      guid: 50e1a005c80379419f3c8bf28bc87513
+      id: 186839574
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Shop Music
+        ObjectType: 4
+      - ElementName: Play_Shop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Shop Music\Play_Shop_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Water_Music
       guid: a320ec94f3bbed46961b4591a46b476f
       id: 1754655507
@@ -238,6 +270,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Resume_Shop_Music
+      guid: a44730eabed1ac4d9deefb1fe2ad982d
+      id: 868285983
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Shop Music
+        ObjectType: 4
+      - ElementName: Resume_Shop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Shop Music\Resume_Shop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Resume_Water_Music
       guid: b743159072b25640be497fd3e53494b4
       id: 2792772864
@@ -263,6 +311,20 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 4
       Path: Default Work Unit\SFX
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Shop Music
+      guid: cc587a51de0a33478ccc29721fabe46c
+      id: 2957547360
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Shop Music
+        ObjectType: 4
+      Path: Default Work Unit\Music\Shop Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -295,6 +357,22 @@ MonoBehaviour:
       - ElementName: Stop_Gorbage_Music
         ObjectType: 3
       Path: Default Work Unit\Music\Gorbage Music\Stop_Gorbage_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Shop_Music
+      guid: 86ee41cb510714478d849d11c827de29
+      id: 2155562184
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Shop Music
+        ObjectType: 4
+      - ElementName: Stop_Shop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Shop Music\Stop_Shop_Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

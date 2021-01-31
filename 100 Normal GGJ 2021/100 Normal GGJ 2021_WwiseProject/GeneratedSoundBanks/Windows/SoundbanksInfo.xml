@@ -16,13 +16,14 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2450362906">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3515272296">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3971424322" Name="Pause_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Pause_Fishing_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2092150287" Name="Pause_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Pause_Gorbage_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1037648256" Name="Pause_Shop_Music" ObjectPath="\Events\Default Work Unit\Music\Shop Music\Pause_Shop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3048328929" Name="Pause_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Pause_Water_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3207147996" Name="Play_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Play_Fishing_Music" DurationType="OneShot" DurationMin="38.005215" DurationMax="38.005215">
 					<IncludedMemoryFiles>
@@ -40,6 +41,18 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="186839574" Name="Play_Shop_Music" ObjectPath="\Events\Default Work Unit\Music\Shop Music\Play_Shop_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="19510311" Language="SFX">
+							<ShortName>Shop_Loop.wav</ShortName>
+							<Path>SFX\Shop_Loop_F4061923.wem</Path>
+						</File>
+						<File Id="682520662" Language="SFX">
+							<ShortName>Shop_Intro.wav</ShortName>
+							<Path>SFX\Shop_Intro_F4061923.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1754655507" Name="Play_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Play_Water_Music" DurationType="OneShot" DurationMin="34.550179" DurationMax="34.550179">
 					<IncludedMemoryFiles>
 						<File Id="26803223" Language="SFX">
@@ -50,9 +63,11 @@
 				</Event>
 				<Event Id="3784097043" Name="Resume_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Resume_Fishing_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1625338090" Name="Resume_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Resume_Gorbage_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="868285983" Name="Resume_Shop_Music" ObjectPath="\Events\Default Work Unit\Music\Shop Music\Resume_Shop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2792772864" Name="Resume_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Resume_Water_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="279003002" Name="Stop_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Stop_Fishing_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3385706007" Name="Stop_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Stop_Gorbage_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2155562184" Name="Stop_Shop_Music" ObjectPath="\Events\Default Work Unit\Music\Shop Music\Stop_Shop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3495434681" Name="Stop_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Stop_Water_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>

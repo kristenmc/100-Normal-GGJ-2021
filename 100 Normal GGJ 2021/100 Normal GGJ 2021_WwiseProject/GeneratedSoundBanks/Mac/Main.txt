@@ -1,9 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
+	186839574	Play_Shop_Music			\Default Work Unit\Music\Shop Music\Play_Shop_Music	
 	279003002	Stop_Fishing_Music			\Default Work Unit\Music\Fishing Music\Stop_Fishing_Music	
+	868285983	Resume_Shop_Music			\Default Work Unit\Music\Shop Music\Resume_Shop_Music	
+	1037648256	Pause_Shop_Music			\Default Work Unit\Music\Shop Music\Pause_Shop_Music	
 	1625338090	Resume_Gorbage_Music			\Default Work Unit\Music\Gorbage Music\Resume_Gorbage_Music	
 	1754655507	Play_Water_Music			\Default Work Unit\Music\Water Music\Play_Water_Music	
 	2023795149	Play_Gorbage_Music			\Default Work Unit\Music\Gorbage Music\Play_Gorbage_Music	
 	2092150287	Pause_Gorbage_Music			\Default Work Unit\Music\Gorbage Music\Pause_Gorbage_Music	
+	2155562184	Stop_Shop_Music			\Default Work Unit\Music\Shop Music\Stop_Shop_Music	
 	2792772864	Resume_Water_Music			\Default Work Unit\Music\Water Music\Resume_Water_Music	
 	3048328929	Pause_Water_Music			\Default Work Unit\Music\Water Music\Pause_Water_Music	
 	3207147996	Play_Fishing_Music			\Default Work Unit\Music\Fishing Music\Play_Fishing_Music	
@@ -13,7 +17,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	3971424322	Pause_Fishing_Music			\Default Work Unit\Music\Fishing Music\Pause_Fishing_Music	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	26803223	Water Gathering	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Mac\SFX\Water Gathering_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Water_Music\Water Gathering\Water Gathering		364755
-	332103486	Fishing	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Mac\SFX\Fishing_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Fishing_Music\Fishing\Fishing		332302
-	924290833	Gorbage_Gathering	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Mac\SFX\Gorbage_Gathering_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Gorbage_Music\Gorbage_Gathering\Gorbage_Gathering		331122
+	19510311	Shop_Loop	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Mac\SFX\Shop_Loop_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Shop_Music\Shop_Loop\Shop_Loop		305932
+	26803223	Water Gathering	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Mac\SFX\Water Gathering_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Minigames\Water_Music\Water Gathering\Water Gathering		364755
+	332103486	Fishing	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Mac\SFX\Fishing_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Minigames\Fishing_Music\Fishing\Fishing		332302
+	682520662	Shop_Intro	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Mac\SFX\Shop_Intro_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Shop_Music\Shop_Intro\Shop_Intro		35690
+	924290833	Gorbage_Gathering	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Mac\SFX\Gorbage_Gathering_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Minigames\Gorbage_Music\Gorbage_Gathering\Gorbage_Gathering		331122
 
