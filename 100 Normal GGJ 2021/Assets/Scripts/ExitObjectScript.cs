@@ -20,6 +20,7 @@ public class ExitObjectScript : MonoBehaviour
     public void activate()
     {
         canvasToOpen.SetActive(true);
+        MiniGameManager.MiniGameManagerInstance.deactivateUI();
         GameManager.GameManagerInstance.setMinigameActivity(true);
         GameManager.GameManagerInstance.setCurrentNode(GameManager.GameManagerInstance.getSelectedNode());
         GameManager.GameManagerInstance.setCurrentNodeConnections(GameManager.GameManagerInstance.getSelectedNodeConnections());

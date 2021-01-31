@@ -11,6 +11,7 @@ public class MiniGameManager : MonoBehaviour
     [SerializeField] GameObject waterCanvas;
     [SerializeField] GameObject gorbageCanvas;
     [SerializeField] GameObject shopCanvas;
+    [SerializeField] GameObject uiCanvas;
     [SerializeField] bool allowForCallbacks;
     #endregion
 
@@ -57,6 +58,7 @@ public class MiniGameManager : MonoBehaviour
     private void Start()
     {
         MiniGameManager.MiniGameManagerInstance.onBeatCall += BeatReset;
+        startWalkMusic();
     }
 
     void BeatReset(int Throwaway)
@@ -128,6 +130,7 @@ public class MiniGameManager : MonoBehaviour
     {
         if (!allowForCallbacks)
         {
+            uiCanvas.SetActive(false);
             foodCanvas.SetActive(true);
             foodCanvas.GetComponent<FishMinigameManager>().resetNumFishGot();
             foodCanvas.GetComponent<FishMinigameManager>().startGame();
@@ -167,6 +170,7 @@ public class MiniGameManager : MonoBehaviour
     {
         if (!allowForCallbacks)
         {
+            uiCanvas.SetActive(false);
             gorbageCanvas.SetActive(true);
             gorbageCanvas.GetComponent<GorbageGame>().resetNumGorbageGot();
             gorbageCanvas.GetComponent<GorbageGame>().startGame();
@@ -204,12 +208,13 @@ public class MiniGameManager : MonoBehaviour
         waterCanvas.SetActive(false);
         gorbageCanvas.SetActive(false);
         shopCanvas.SetActive(false);
+        uiCanvas.SetActive(true);
         allowForCallbacks = false;
         //stopFoodMusic();
         //stopWaterMusic();
         //stopGorbageMusic();
         stopShopMusic();
-        //resumeWalkMusic();
+        resumeWalkMusic();
     }
 
     void Callback_Function(object in_Cookie, AkCallbackType in_Type, object in_Info)
@@ -233,7 +238,7 @@ public class MiniGameManager : MonoBehaviour
     public void pauseMusic()
     {
         Debug.Log("Pausing All Music");
-        //AkSoundEngine.PostEvent("Pause_Walking_Music", gameObject);
+        AkSoundEngine.PostEvent("Pause_Walk_Music", gameObject);
         AkSoundEngine.PostEvent("Pause_Fishing_Music", gameObject);
         AkSoundEngine.PostEvent("Pause_Water_Music", gameObject);
         AkSoundEngine.PostEvent("Pause_Gorbage_Music", gameObject);
@@ -342,6 +347,16 @@ public class MiniGameManager : MonoBehaviour
     {
         Debug.Log("Starting Shop Music");
         shopMusicStart.Post(gameObject);
+    }
+
+    public void activateUI()
+    {
+        uiCanvas.SetActive(true);
+    }
+
+    public void deactivateUI()
+    {
+        uiCanvas.SetActive(false);
     }
     #endregion
 }

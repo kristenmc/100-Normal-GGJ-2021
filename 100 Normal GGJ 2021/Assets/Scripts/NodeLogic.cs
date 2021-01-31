@@ -44,6 +44,7 @@ public class NodeLogic : MonoBehaviour
                 GameManager.GameManagerInstance.setMinigameActivity(false);
             }
         }
+        MiniGameManager.MiniGameManagerInstance.activateUI();
     }
 
     public void getParentConnections()

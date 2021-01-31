@@ -62,6 +62,7 @@ public class FishMinigameManager : MonoBehaviour
                         }
                         numFishGot += tempfish;
                         GameManager.GameManagerInstance.changeFood(tempfish);
+                        GameManager.GameManagerInstance.changeWater(tempfish);
                         //Debug.Log("Got a Fish");
                         fishGettable = false;
                         textCounter.updateText(numFishGot);

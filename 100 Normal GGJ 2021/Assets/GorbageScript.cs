@@ -69,6 +69,13 @@ public class GorbageScript : MonoBehaviour
         }
     }
 
+    public void newGame()
+    {
+        isActive = false;
+        gameObject.GetComponent<RectTransform>().localPosition = spawnLocation.localPosition;
+        fixLerpTimer(maxLerpTime);
+    }
+
     public void fixLerpTimer(float correctTime)
     {
         lerpTime = correctTime;

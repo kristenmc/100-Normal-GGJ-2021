@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 5fae626e10ae3146a83448e543c8f14c
     GuidInternal: 
-    m_lastTime: -8585894770157074413
+    m_lastTime: -8585894722322296168
     List:
     - name: Main
       guid: 956fa0284a460d40bdb804f883bf17cd
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: bcdbade782bb83499eca6636e2bb1a5a
     GuidInternal: 
-    m_lastTime: -8585894770159438382
+    m_lastTime: -8585894722330743616
     List:
     - name: Fishing
       guid: d9a300a811871c4b8a158d7f920c361c
@@ -95,6 +95,20 @@ MonoBehaviour:
       - ElementName: Fishing Music
         ObjectType: 4
       Path: Default Work Unit\Music\Fishing Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Gorbage
+      guid: f2adcd623ace4042a340613850e9486a
+      id: 155358788
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Gorbage
+        ObjectType: 4
+      Path: Default Work Unit\SFX\Gorbage
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -316,6 +330,38 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 38.005215
       minDuration: 38.005215
+    - name: Play_Garbage_Fall
+      guid: 892f10fe81508244b111f03ce447306b
+      id: 713403241
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Gorbage
+        ObjectType: 4
+      - ElementName: Play_Garbage_Fall
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Gorbage\Play_Garbage_Fall
+      maxAttenuation: 0
+      maxDuration: 1.940522
+      minDuration: 1.940522
+    - name: Play_Garbage_Punch
+      guid: a3842e3017aa0246b6bc3c263d42454b
+      id: 1206809446
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Gorbage
+        ObjectType: 4
+      - ElementName: Play_Garbage_Punch
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Gorbage\Play_Garbage_Punch
+      maxAttenuation: 0
+      maxDuration: 0.493946
+      minDuration: 0.493946
     - name: Play_Gorbage_Music
       guid: 610002fded545e44ad8e4896cd24bec4
       id: 2023795149
@@ -346,6 +392,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.472494
       minDuration: 0.472494
+    - name: Play_Ocean
+      guid: 839189f2b9a1c447be9eb66ac810c8a3
+      id: 1724638476
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Play_Ocean
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Play_Ocean
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Shop_Music
       guid: 50e1a005c80379419f3c8bf28bc87513
       id: 186839574
@@ -532,6 +592,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Ocean
+      guid: 6270a19ccc32a8418aec92f5c084dfe6
+      id: 4196961906
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Stop_Ocean
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Stop_Ocean
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Shop_Music
       guid: 86ee41cb510714478d849d11c827de29
       id: 2155562184
@@ -594,6 +668,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Water
+      guid: 7589439ec570324798ba3437887e85cd
+      id: 2654748154
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Water
+        ObjectType: 4
+      Path: Default Work Unit\SFX\Water
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Water Music
       guid: 5271347afc7e1d46a2981f0d43384ec1
       id: 2066810803
@@ -648,11 +736,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585896274702044345
     List: []
-  ExpandedItems:
-  - /100 Normal GGJ 2021_WwiseProject
-  - /100 Normal GGJ 2021_WwiseProject/Events
-  - /100 Normal GGJ 2021_WwiseProject/Events/Default Work Unit
-  - /100 Normal GGJ 2021_WwiseProject/Events/Default Work Unit/Music
-  - /100 Normal GGJ 2021_WwiseProject/Events/Default Work Unit/Music/Fishing Music
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

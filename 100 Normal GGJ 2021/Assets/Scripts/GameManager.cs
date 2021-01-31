@@ -348,4 +348,10 @@ public class GameManager : MonoBehaviour
             0);
     }
     #endregion
+
+    public void getHungry(int i)
+    {
+        changeFood(-i * animalAmt);
+        changeWater(-i * animalAmt);
+    }
 }

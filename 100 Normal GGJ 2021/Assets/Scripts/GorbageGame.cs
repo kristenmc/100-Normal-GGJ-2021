@@ -39,6 +39,14 @@ public class GorbageGame : MonoBehaviour
         badGarbageCount = 0;
         textCounterGorbage.updateText(gorbageCount);
         textCounterBadGarbage.updateText(badGarbageCount);
+        foreach(GorbageScript garbage in spawnedGarbage)
+        {
+            garbage.newGame();
+        }
+        foreach(GorbageScript garbage in spawnedGorbage)
+        {
+            garbage.newGame();
+        }
     }
     
     // Update is called once per frame

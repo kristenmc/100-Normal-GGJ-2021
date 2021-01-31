@@ -6,6 +6,8 @@ public class MovementScript : MonoBehaviour
 {
     [SerializeField] float rotationSpeed;
     [SerializeField] float rotation = 0f;
+    [SerializeField] float stepsTaken = 0f;
+    [SerializeField] float stepsBeforeHunger = 90;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +23,23 @@ public class MovementScript : MonoBehaviour
             {
                 gameObject.transform.Rotate(new Vector3(0, 0, rotationSpeed));
                 rotation += rotationSpeed;
+                stepsTaken += rotationSpeed;
             }
             if (Input.GetAxis("Horizontal") < 0 && rotation > 0f)
             {
                 gameObject.transform.Rotate(new Vector3(0, 0, -rotationSpeed));
                 rotation -= rotationSpeed;
+                stepsTaken += rotationSpeed;
             }
             if (Input.GetButtonDown("Fire1"))
             {
                 //GameManager.Game_Manager_Instance.spawnInteractables(.1f, .7f, .14f, .05f, .01f, InteractType.Water);
             }
+        }
+        if(stepsTaken >= stepsBeforeHunger)
+        {
+            GameManager.GameManagerInstance.getHungry(1);
+            stepsTaken = 0;
         }
     }
 
