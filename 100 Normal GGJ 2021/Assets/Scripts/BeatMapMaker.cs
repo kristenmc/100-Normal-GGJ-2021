@@ -26,7 +26,7 @@ public class BeatMapMaker : MonoBehaviour
     public string GenerateBeatMap(int length, List<string> typesOfThing)
     {
         endList = new List<string>();
-        string endString = "";
+        string endString = "9999";
         for (int i = 0; i < length; i++)
         {
             int randChoice = Random.Range(0, typesOfThing.Count);
