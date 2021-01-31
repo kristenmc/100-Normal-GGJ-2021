@@ -23,6 +23,12 @@ public class MiniGameManager : MonoBehaviour
     [SerializeField] List<string> gorbageBeatMapParts;
     [SerializeField] string generatedBeatMap;
     [SerializeField] int currentBeatmapLocation = 0;
+
+    [SerializeField] int BPM;
+    [SerializeField] string currentMiniGameName;
+    [SerializeField] float timer;
+    [SerializeField] float leeWay;
+
     #endregion
 
     [SerializeField] AK.Wwise.Event shopMusicStart;
@@ -48,6 +54,39 @@ public class MiniGameManager : MonoBehaviour
     {
         MiniGameManagerInstance = this;
     }
+    private void Start()
+    {
+        MiniGameManager.MiniGameManagerInstance.onBeatCall += BeatReset;
+    }
+
+    void BeatReset(int Throwaway)
+    {
+        timer = 0;
+    }
+
+    bool isOnBeat()
+    {
+        if (timer <= leeWay)
+        {
+            return true;
+        }
+        else if (timer >= 60 / 120 - leeWay && currentMiniGameName == "Fishing")
+        {
+            return true;
+        }
+        else if (timer >= 60 / 132 - leeWay && currentMiniGameName == "Water")
+        {
+            return true;
+        }
+        else if (timer >= 60 / 124 - leeWay && currentMiniGameName == "Gorbage")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -56,6 +95,7 @@ public class MiniGameManager : MonoBehaviour
         {
             startFoodMinigame();
         }
+        timer += Time.deltaTime;
     }
 
     #region Start Minigame
