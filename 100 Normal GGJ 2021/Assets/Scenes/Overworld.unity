@@ -1638,6 +1638,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4343695395941571763, guid: 8561e4562d99f8b4891a530d19d82404, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4343695395941571764, guid: 8561e4562d99f8b4891a530d19d82404, type: 3}
       propertyPath: m_Name
       value: shop_menu

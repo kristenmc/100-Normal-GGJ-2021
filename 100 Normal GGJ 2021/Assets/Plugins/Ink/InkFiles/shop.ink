@@ -33,17 +33,17 @@ You gained some water!
 
 ==water_purifier==
 #water_purifier
-You gained a water purifier, increasing your water yeild!
+You gained a water purifier, increasing your water yield!
         +[Yay!] ->thanks
 
 ==net==
 #net
-You gained a net, increasing your food yeild!
+You gained a net, increasing your food yield!
     +[Yay!] ->thanks
 
 ==metal_detector==
 #metal_detector
-you gained a metal detector, increasing your gorbage yeild!
+you gained a metal detector, increasing your gorbage yield!
     +[Yay!] ->thanks
 
 
