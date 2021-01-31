@@ -136,7 +136,7 @@ public class MiniGameManager : MonoBehaviour
         AkSoundEngine.PostEvent("Pause_Fishing_Music", gameObject);
         AkSoundEngine.PostEvent("Pause_Water_Music", gameObject);
         AkSoundEngine.PostEvent("Pause_Gorbage_Music", gameObject);
-        //AkSoundEngine.PostEvent("Pause_Shop_Music", gameObject);
+        AkSoundEngine.PostEvent("Pause_Shop_Music", gameObject);
     }
     
     #region Resume Music Funcs
