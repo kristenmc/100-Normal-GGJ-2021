@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="799921593">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2062343737">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -106,6 +106,22 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="713403241" Name="Play_Garbage_Fall" ObjectPath="\Events\Default Work Unit\SFX\Gorbage\Play_Garbage_Fall" DurationType="OneShot" DurationMin="1.940522" DurationMax="1.940522">
+					<IncludedMemoryFiles>
+						<File Id="295753483" Language="SFX">
+							<ShortName>Garbage_Fall.wav</ShortName>
+							<Path>SFX\Garbage_Fall_2CC72C6C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1206809446" Name="Play_Garbage_Punch" ObjectPath="\Events\Default Work Unit\SFX\Gorbage\Play_Garbage_Punch" DurationType="OneShot" DurationMin="0.493946" DurationMax="0.493946">
+					<IncludedMemoryFiles>
+						<File Id="3847066" Language="SFX">
+							<ShortName>Gorbage_Punch.wav</ShortName>
+							<Path>SFX\Gorbage_Punch_2CC72C6C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2023795149" Name="Play_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Play_Gorbage_Music" DurationType="OneShot" DurationMin="39.455643" DurationMax="39.455643">
 					<IncludedMemoryFiles>
 						<File Id="924290833" Language="SFX">
@@ -119,6 +135,14 @@
 						<File Id="92582444" Language="SFX">
 							<ShortName>Miss.wav</ShortName>
 							<Path>SFX\Miss_2CC72C6C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1724638476" Name="Play_Ocean" ObjectPath="\Events\Default Work Unit\SFX\Play_Ocean" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="837275606" Language="SFX">
+							<ShortName>Ocean.wav</ShortName>
+							<Path>SFX\Ocean_2FBCAB86.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -161,6 +185,7 @@
 				<Event Id="2792772864" Name="Resume_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Resume_Water_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="279003002" Name="Stop_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Stop_Fishing_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3385706007" Name="Stop_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Stop_Gorbage_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4196961906" Name="Stop_Ocean" ObjectPath="\Events\Default Work Unit\SFX\Stop_Ocean" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2155562184" Name="Stop_Shop_Music" ObjectPath="\Events\Default Work Unit\Music\Shop Music\Stop_Shop_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3023653035" Name="Stop_Walk_Music" ObjectPath="\Events\Default Work Unit\Music\Walk Music\Stop_Walk_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3495434681" Name="Stop_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Stop_Water_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>

@@ -332,7 +332,54 @@
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Water_SFX" ID="{11846007-1FA9-41E1-986B-F9930EBF2520}" ShortID="509776382"/>
-				<Folder Name="Gorbage_Music" ID="{B53FDF40-A7A3-4397-AB66-091CA9E5FE70}" ShortID="951689786"/>
+				<Folder Name="Gorbage_SFX" ID="{B53FDF40-A7A3-4397-AB66-091CA9E5FE70}" ShortID="951689786">
+					<ChildrenList>
+						<Sound Name="Garbage_Fall" ID="{FD75C0BB-E939-4CA4-90FC-A18342647642}" ShortID="906867359">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Garbage_Fall" ID="{C406EE1F-D772-4112-9C76-D830883B8DA6}">
+									<Language>SFX</Language>
+									<AudioFile>Garbage_Fall.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="295753483"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Garbage_Fall" ID="{C406EE1F-D772-4112-9C76-D830883B8DA6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Garbage_Punch" ID="{8C29C0E0-8D22-47D1-968B-9D459A475A5F}" ShortID="229411687">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Gorbage_Punch" ID="{1A718564-8BB1-4686-9397-27B9301B7528}">
+									<Language>SFX</Language>
+									<AudioFile>Gorbage_Punch.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="3847066"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Gorbage_Punch" ID="{1A718564-8BB1-4686-9397-27B9301B7528}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 				<Sound Name="Miss" ID="{128078F8-F3AC-47EE-AF29-2DE3DAFE46CC}" ShortID="950136293">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -353,6 +400,31 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Miss" ID="{33D45D81-2211-4F03-A5B6-42CC167925BC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ocean" ID="{D393BC2A-A8A2-43E8-83F3-ECBB7877C3F7}" ShortID="436521421">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ocean" ID="{E017E3AF-6E3D-429F-BF78-B666E5F90777}">
+							<Language>SFX</Language>
+							<AudioFile>Ocean.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="837275606"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ocean" ID="{E017E3AF-6E3D-429F-BF78-B666E5F90777}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

@@ -25,8 +25,11 @@ namespace AK
         static const AkUniqueID PLAY_FISH_CAUGHT = 3785731807U;
         static const AkUniqueID PLAY_FISH_SPAWN = 1651012112U;
         static const AkUniqueID PLAY_FISHING_MUSIC = 3207147996U;
+        static const AkUniqueID PLAY_GARBAGE_FALL = 713403241U;
+        static const AkUniqueID PLAY_GARBAGE_PUNCH = 1206809446U;
         static const AkUniqueID PLAY_GORBAGE_MUSIC = 2023795149U;
         static const AkUniqueID PLAY_MISS = 1631400290U;
+        static const AkUniqueID PLAY_OCEAN = 1724638476U;
         static const AkUniqueID PLAY_SHOP_MUSIC = 186839574U;
         static const AkUniqueID PLAY_WALK_MUSIC = 2449179153U;
         static const AkUniqueID PLAY_WATER_MUSIC = 1754655507U;
@@ -37,6 +40,7 @@ namespace AK
         static const AkUniqueID RESUME_WATER_MUSIC = 2792772864U;
         static const AkUniqueID STOP_FISHING_MUSIC = 279003002U;
         static const AkUniqueID STOP_GORBAGE_MUSIC = 3385706007U;
+        static const AkUniqueID STOP_OCEAN = 4196961906U;
         static const AkUniqueID STOP_SHOP_MUSIC = 2155562184U;
         static const AkUniqueID STOP_WALK_MUSIC = 3023653035U;
         static const AkUniqueID STOP_WATER_MUSIC = 3495434681U;
