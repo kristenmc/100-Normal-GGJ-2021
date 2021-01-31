@@ -104,6 +104,7 @@ public class ShopMenu : MonoBehaviour
     // Clear out all of the UI, calling Destory() in reverse
     void clearUI()
     {
+        //MiniGameManager.MiniGameManagerInstance.endMinigame();
         int childCount = this.transform.childCount;
         for (int i = childCount - 1; i >= 0; --i)
         {
