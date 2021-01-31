@@ -23,14 +23,14 @@ public class BeatMapMaker : MonoBehaviour
         listOfThings.Add(medFish);
     }
 
-    public string GenerateBeatMap(int length)
+    public string GenerateBeatMap(int length, List<string> typesOfThing)
     {
         endList = new List<string>();
         string endString = "";
         for (int i = 0; i < length; i++)
         {
-            int randChoice = Random.Range(0, listOfThings.Count);
-            endString = endString + listOfThings[randChoice];
+            int randChoice = Random.Range(0, typesOfThing.Count);
+            endString = endString + typesOfThing[randChoice];
         }
 
 
