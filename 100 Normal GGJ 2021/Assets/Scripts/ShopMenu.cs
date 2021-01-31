@@ -20,6 +20,9 @@ public class ShopMenu : MonoBehaviour
     private Story story;
     public Button buttonPrefab;
 
+    public Image background;
+
+
     private GameManager gameManager;
 
     // Start is called before the first frame update
@@ -27,7 +30,6 @@ public class ShopMenu : MonoBehaviour
     {
         //Finding the gameobject initally when runned for the first time
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        
         
         // Load the next story block
         story = new Story(inkJSONAsset.text);
@@ -54,7 +56,7 @@ public class ShopMenu : MonoBehaviour
         // Add a new Text component to the new GameObject
         Text newTextObject = newGameObject.AddComponent<Text>();
         // Set the fontSize larger
-        newTextObject.fontSize = 24;
+        newTextObject.fontSize = 50;
         // Set the text from new story block
         newTextObject.text = getNextStoryBlock();
 
@@ -68,6 +70,10 @@ public class ShopMenu : MonoBehaviour
 
             // Gets the text from the button prefab
             Text choiceText = choiceButton.GetComponentInChildren<Text>();
+
+            choiceText.fontSize = 25;
+            choiceText.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
+
             choiceText.text = choice.text;
 
             // Set listener
@@ -97,6 +103,7 @@ public class ShopMenu : MonoBehaviour
         int childCount = this.transform.childCount;
         for (int i = childCount - 1; i >= 0; --i)
         {
+            if (this.transform.GetChild(i).gameObject.tag != "shop_UI") 
             GameObject.Destroy(this.transform.GetChild(i).gameObject);
         }
     }
