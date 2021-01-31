@@ -158,16 +158,8 @@ public class ShopMenu : MonoBehaviour
             //This resets the canvas and prepares for the next visit
             else if (tags[0] == "end")
             {   
-                restartStory();
-                refresh();
                 this.GetComponent<Canvas>().enabled = false;
             }
         }
     }
-    
-    void restartStory()
-    {
-        story.ResetState();
-    }
-
 }
