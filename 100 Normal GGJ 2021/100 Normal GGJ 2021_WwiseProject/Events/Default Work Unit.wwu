@@ -176,6 +176,63 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Shop Music" ID="{517A58CC-0ADE-4733-8CCC-29721FABE46C}" ShortID="341851639">
+							<ChildrenList>
+								<Event Name="Resume_Shop_Music" ID="{EA3047A4-D1BE-4DAC-9DEE-FB1FE2AD982D}">
+									<ChildrenList>
+										<Action Name="" ID="{D0EB3E91-7372-4EB7-9581-00D9482485F1}" ShortID="302471032">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Shop_Music" ID="{47C98709-F365-4062-93A0-6E1993966842}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Shop_Music" ID="{CB41EE86-0751-4714-8D84-9D11C827DE29}">
+									<ChildrenList>
+										<Action Name="" ID="{585D6D00-0F4D-46CF-9D4E-8D426DC16B2E}" ShortID="396605286">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Shop_Music" ID="{47C98709-F365-4062-93A0-6E1993966842}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pause_Shop_Music" ID="{AC94C4F1-4876-4E6F-9361-985EB0507EA5}">
+									<ChildrenList>
+										<Action Name="" ID="{3C63CD3E-8AC4-4872-98CB-0D7AAC09A052}" ShortID="702631729">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Shop_Music" ID="{47C98709-F365-4062-93A0-6E1993966842}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Shop_Music" ID="{05A0E150-03C8-4179-9F3C-8BF28BC87513}">
+									<ChildrenList>
+										<Action Name="" ID="{A10DC71F-9684-4026-8BC3-32098ADA60E7}" ShortID="336038700">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Shop_Music" ID="{47C98709-F365-4062-93A0-6E1993966842}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{A8E22260-E7D6-49DF-A11C-D02DC7BBB937}" ShortID="235616933"/>
