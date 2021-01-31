@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gorbage
+  - shop_UI
   layers:
   - Default
   - TransparentFX

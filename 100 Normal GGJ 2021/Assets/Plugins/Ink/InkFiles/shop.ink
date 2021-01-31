@@ -2,7 +2,7 @@ VAR haveGorbage = true
 -> intro 
 ===intro==
 #check_gorbage
-    Gimmie da gorbage 
+    Gimmie da gorbage! 
     
     +[items] ->items
     +[exit] ->leave 
