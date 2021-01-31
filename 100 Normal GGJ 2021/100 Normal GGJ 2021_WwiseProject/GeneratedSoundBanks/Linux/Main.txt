@@ -1,0 +1,19 @@
+Event	ID	Name			Wwise Object Path	Notes
+	279003002	Stop_Fishing_Music			\Default Work Unit\Music\Fishing Music\Stop_Fishing_Music	
+	1625338090	Resume_Gorbage_Music			\Default Work Unit\Music\Gorbage Music\Resume_Gorbage_Music	
+	1754655507	Play_Water_Music			\Default Work Unit\Music\Water Music\Play_Water_Music	
+	2023795149	Play_Gorbage_Music			\Default Work Unit\Music\Gorbage Music\Play_Gorbage_Music	
+	2092150287	Pause_Gorbage_Music			\Default Work Unit\Music\Gorbage Music\Pause_Gorbage_Music	
+	2792772864	Resume_Water_Music			\Default Work Unit\Music\Water Music\Resume_Water_Music	
+	3048328929	Pause_Water_Music			\Default Work Unit\Music\Water Music\Pause_Water_Music	
+	3207147996	Play_Fishing_Music			\Default Work Unit\Music\Fishing Music\Play_Fishing_Music	
+	3385706007	Stop_Gorbage_Music			\Default Work Unit\Music\Gorbage Music\Stop_Gorbage_Music	
+	3495434681	Stop_Water_Music			\Default Work Unit\Music\Water Music\Stop_Water_Music	
+	3784097043	Resume_Fishing_Music			\Default Work Unit\Music\Fishing Music\Resume_Fishing_Music	
+	3971424322	Pause_Fishing_Music			\Default Work Unit\Music\Fishing Music\Pause_Fishing_Music	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	26803223	Water Gathering	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Water Gathering_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Water_Music\Water Gathering\Water Gathering		364755
+	332103486	Fishing	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Fishing_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Fishing_Music\Fishing\Fishing		332302
+	924290833	Gorbage_Gathering	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Gorbage_Gathering_F4061923.wem		\Interactive Music Hierarchy\Default Work Unit\Gorbage_Music\Gorbage_Gathering\Gorbage_Gathering		331122
+

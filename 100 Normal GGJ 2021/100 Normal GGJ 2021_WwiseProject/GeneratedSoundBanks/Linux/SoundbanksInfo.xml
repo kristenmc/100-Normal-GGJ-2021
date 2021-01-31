@@ -16,10 +16,45 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2348770020">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2994185598">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3971424322" Name="Pause_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Pause_Fishing_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2092150287" Name="Pause_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Pause_Gorbage_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3048328929" Name="Pause_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Pause_Water_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3207147996" Name="Play_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Play_Fishing_Music" DurationType="OneShot" DurationMin="38.005215" DurationMax="38.005215">
+					<IncludedMemoryFiles>
+						<File Id="332103486" Language="SFX">
+							<ShortName>Fishing.wav</ShortName>
+							<Path>SFX\Fishing_F4061923.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2023795149" Name="Play_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Play_Gorbage_Music" DurationType="OneShot" DurationMin="39.455643" DurationMax="39.455643">
+					<IncludedMemoryFiles>
+						<File Id="924290833" Language="SFX">
+							<ShortName>Gorbage_Gathering.wav</ShortName>
+							<Path>SFX\Gorbage_Gathering_F4061923.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1754655507" Name="Play_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Play_Water_Music" DurationType="OneShot" DurationMin="34.550179" DurationMax="34.550179">
+					<IncludedMemoryFiles>
+						<File Id="26803223" Language="SFX">
+							<ShortName>Water Gathering.wav</ShortName>
+							<Path>SFX\Water Gathering_F4061923.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3784097043" Name="Resume_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Resume_Fishing_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1625338090" Name="Resume_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Resume_Gorbage_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2792772864" Name="Resume_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Resume_Water_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="279003002" Name="Stop_Fishing_Music" ObjectPath="\Events\Default Work Unit\Music\Fishing Music\Stop_Fishing_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3385706007" Name="Stop_Gorbage_Music" ObjectPath="\Events\Default Work Unit\Music\Gorbage Music\Stop_Gorbage_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3495434681" Name="Stop_Water_Music" ObjectPath="\Events\Default Work Unit\Music\Water Music\Stop_Water_Music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

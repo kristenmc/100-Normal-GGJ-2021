@@ -1,6 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E7ADDBBC-BB82-4983-9ECA-6636E2BB1A5A}" SchemaVersion="97">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{E7ADDBBC-BB82-4983-9ECA-6636E2BB1A5A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E7ADDBBC-BB82-4983-9ECA-6636E2BB1A5A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Music" ID="{CFB0D552-8E84-4BA1-A448-E1214AD2CC03}" ShortID="396810919">
+					<ChildrenList>
+						<Folder Name="Gorbage Music" ID="{85557A24-0A7A-4D46-A5D7-7440952D7FCA}" ShortID="304491680">
+							<ChildrenList>
+								<Event Name="Resume_Gorbage_Music" ID="{C6926268-7BEB-48AE-BC88-3499DE2448FC}">
+									<ChildrenList>
+										<Action Name="" ID="{F8DB7429-835F-445E-91F3-CFEF4B0655EA}" ShortID="28791130">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Gorbage_Music" ID="{EBF9402E-001B-4F51-AB6B-88F0879E951A}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Gorbage_Music" ID="{FD020061-54ED-445E-AD8E-4896CD24BEC4}">
+									<ChildrenList>
+										<Action Name="" ID="{88507829-FD56-4CCF-8C4B-D334A001BE4B}" ShortID="530906270">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Gorbage_Music" ID="{EBF9402E-001B-4F51-AB6B-88F0879E951A}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pause_Gorbage_Music" ID="{6672726E-1746-4869-914D-3DB8E9557214}">
+									<ChildrenList>
+										<Action Name="" ID="{BB5CC3D6-02FC-450C-850A-07AE0428CBCA}" ShortID="961745652">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Gorbage_Music" ID="{EBF9402E-001B-4F51-AB6B-88F0879E951A}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Gorbage_Music" ID="{F056058C-BE28-4C2B-9736-0A0B8279EC83}">
+									<ChildrenList>
+										<Action Name="" ID="{D3F144E4-9328-4FA6-BCEA-979349D27437}" ShortID="440754876">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Gorbage_Music" ID="{EBF9402E-001B-4F51-AB6B-88F0879E951A}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Fishing Music" ID="{40EE9C69-C559-4B9E-96DB-10951169BF44}" ShortID="960347056">
+							<ChildrenList>
+								<Event Name="Play_Fishing_Music" ID="{543885F6-B568-4A33-861F-0F122EA13EF0}">
+									<ChildrenList>
+										<Action Name="" ID="{16194D17-7B52-44CB-959F-6418710F9890}" ShortID="129275391">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fishing_Music" ID="{F3FC9A44-E09F-4790-BAB2-B16D45B84DF4}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Resume_Fishing_Music" ID="{47505815-5586-4F4F-9FA4-2B2A68B32716}">
+									<ChildrenList>
+										<Action Name="" ID="{04CB9C51-6F2E-44DF-967D-E614C1B8D483}" ShortID="1010566565">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fishing_Music" ID="{F3FC9A44-E09F-4790-BAB2-B16D45B84DF4}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Fishing_Music" ID="{DFA6489E-8DE1-4A4A-902C-3209BC758805}">
+									<ChildrenList>
+										<Action Name="" ID="{45F5BC89-A358-438F-812B-2E2AA1DF70D4}" ShortID="767464964">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fishing_Music" ID="{F3FC9A44-E09F-4790-BAB2-B16D45B84DF4}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pause_Fishing_Music" ID="{F290D248-B9B1-4D23-991A-82AF5126958B}">
+									<ChildrenList>
+										<Action Name="" ID="{CA5035CE-2303-4CDB-9864-321C676C8349}" ShortID="523832079">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fishing_Music" ID="{F3FC9A44-E09F-4790-BAB2-B16D45B84DF4}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Water Music" ID="{7A347152-7EFC-461D-A298-1F0D43384EC1}" ShortID="465833454">
+							<ChildrenList>
+								<Event Name="Play_Water_Music" ID="{94EC20A3-BBF3-46ED-961B-4591A46B476F}">
+									<ChildrenList>
+										<Action Name="" ID="{9886AF55-9B1C-4581-8E05-2A548A3B22F4}" ShortID="108160815">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Water_Music" ID="{42A3EF00-9DCC-4788-8179-1A6606E2C216}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pause_Water_Music" ID="{137ACA21-F512-4780-92DB-A35FB1D3B881}">
+									<ChildrenList>
+										<Action Name="" ID="{EF6A047D-59C3-4AAB-AEAA-E1A8E31EE72C}" ShortID="442077195">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="7"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Water_Music" ID="{42A3EF00-9DCC-4788-8179-1A6606E2C216}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_Water_Music" ID="{6509EAD5-8243-4433-8D72-8B75571CBB91}">
+									<ChildrenList>
+										<Action Name="" ID="{92F808A4-7EA6-4D36-8691-1DA79A6C2A22}" ShortID="109147660">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Water_Music" ID="{42A3EF00-9DCC-4788-8179-1A6606E2C216}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Resume_Water_Music" ID="{901543B7-B272-4056-BE49-7FD3E53494B4}">
+									<ChildrenList>
+										<Action Name="" ID="{FA633055-EA60-4429-8D10-20B506DC2721}" ShortID="660608030">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="9"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Water_Music" ID="{42A3EF00-9DCC-4788-8179-1A6606E2C216}" WorkUnitID="{778AD3C2-8D4F-4A40-9CD4-2924C1A8038D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SFX" ID="{A8E22260-E7D6-49DF-A11C-D02DC7BBB937}" ShortID="235616933"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

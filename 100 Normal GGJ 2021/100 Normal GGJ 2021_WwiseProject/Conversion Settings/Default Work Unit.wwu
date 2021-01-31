@@ -21,16 +21,16 @@
 						</Property>
 						<Property Name="MaxSampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="Windows">0</Value>
-								<Value Platform="Linux">0</Value>
-								<Value Platform="Mac">0</Value>
+								<Value Platform="Windows">48000</Value>
+								<Value Platform="Linux">48000</Value>
+								<Value Platform="Mac">48000</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MinSampleRate" Type="int32">
 							<ValueList>
-								<Value Platform="Windows">0</Value>
-								<Value Platform="Linux">0</Value>
-								<Value Platform="Mac">0</Value>
+								<Value Platform="Windows">44100</Value>
+								<Value Platform="Linux">44100</Value>
+								<Value Platform="Mac">44100</Value>
 							</ValueList>
 						</Property>
 						<Property Name="SampleRate" Type="int32">
@@ -43,13 +43,25 @@
 					</PropertyList>
 					<ConversionPluginInfoList>
 						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{1E22A5F3-4B19-45CB-8FB0-1191908475DF}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{EBDB60AA-A4F0-438F-A22C-880A09287819}" PluginName="Opus" CompanyID="0" PluginID="19">
+								<PropertyList>
+									<Property Name="Quality" Type="int32" Value="32"/>
+								</PropertyList>
+							</ConversionPlugin>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Linux">
-							<ConversionPlugin Name="" ID="{A64AFB3F-5E05-4C42-9F39-C0465EB77BC8}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{817DD22E-4494-42DA-9EAF-B16DAF1B239E}" PluginName="Opus" CompanyID="0" PluginID="19">
+								<PropertyList>
+									<Property Name="Quality" Type="int32" Value="32"/>
+								</PropertyList>
+							</ConversionPlugin>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Mac">
-							<ConversionPlugin Name="" ID="{F16F5EBD-4E8A-4FB5-B73D-189F353A31AD}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{AC5316B0-9B2C-45A7-83F2-FAEF2C84241E}" PluginName="Opus" CompanyID="0" PluginID="19">
+								<PropertyList>
+									<Property Name="Quality" Type="int32" Value="32"/>
+								</PropertyList>
+							</ConversionPlugin>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>
