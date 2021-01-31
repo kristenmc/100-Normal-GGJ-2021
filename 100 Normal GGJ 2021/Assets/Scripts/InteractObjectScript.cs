@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class InteractObjectScript : MonoBehaviour
 {
-    [SerializeField] GameObject canvasToOpen;
+    [SerializeField] InteractType type;
+    [SerializeField] bool alreadyInteractedWith = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,10 @@ public class InteractObjectScript : MonoBehaviour
 
     public void activate()
     {
-        canvasToOpen.SetActive(true);
-        GameManager.GameManagerInstance.setMinigameActivity(true);
+        if(!alreadyInteractedWith)
+        {
+            MiniGameManager.MiniGameManagerInstance.chooseMinigame(type);
+            alreadyInteractedWith = true;
+        }
     }
 }

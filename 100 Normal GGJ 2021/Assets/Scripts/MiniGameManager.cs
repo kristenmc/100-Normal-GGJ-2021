@@ -96,11 +96,31 @@ public class MiniGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire2"))
+        /*if(Input.GetButtonDown("Fire2"))
+        {
+            startGorbageMinigame();
+        }*/
+        timer += Time.deltaTime;
+    }
+
+    public void chooseMinigame(InteractType type)
+    {
+        if(type == InteractType.Food)
         {
             startFoodMinigame();
         }
-        timer += Time.deltaTime;
+        else if(type == InteractType.Gorbage)
+        {
+            startGorbageMinigame();
+        }
+        else if(type == InteractType.Shop)
+        {
+            startShopInteraction();
+        }
+        else if(type == InteractType.Animal)
+        {
+            GameManager.GameManagerInstance.changeAnimals(1);
+        }
     }
 
     #region Start Minigame
@@ -110,6 +130,7 @@ public class MiniGameManager : MonoBehaviour
         {
             foodCanvas.SetActive(true);
             foodCanvas.GetComponent<FishMinigameManager>().resetNumFishGot();
+            foodCanvas.GetComponent<FishMinigameManager>().startGame();
             GameManager.GameManagerInstance.setMinigameActivity(true);
             pauseMusic();
             startFoodMusic();
@@ -128,9 +149,11 @@ public class MiniGameManager : MonoBehaviour
         if (!allowForCallbacks)
         {
             waterCanvas.SetActive(true);
+
             GameManager.GameManagerInstance.setMinigameActivity(true);
             pauseMusic();
             startWaterMusic();
+            resumeWaterMusic();
             generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(waterBeatMapLength, waterBeatMapParts);
             allowForCallbacks = true;
             currentBeatmapLocation = 0;
@@ -145,9 +168,12 @@ public class MiniGameManager : MonoBehaviour
         if (!allowForCallbacks)
         {
             gorbageCanvas.SetActive(true);
+            gorbageCanvas.GetComponent<GorbageGame>().resetNumGorbageGot();
+            gorbageCanvas.GetComponent<GorbageGame>().startGame();
             GameManager.GameManagerInstance.setMinigameActivity(true);
             pauseMusic();
             startGorbageMusic();
+            resumeGorbageMusic();
             generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(gorbageBeatMapLength, gorbageBeatMapParts);
             allowForCallbacks = true;
             currentBeatmapLocation = 0;
@@ -161,22 +187,29 @@ public class MiniGameManager : MonoBehaviour
     {
         if (!allowForCallbacks)
         {
+            shopCanvas.SetActive(true);
+            GameManager.GameManagerInstance.setMinigameActivity(true);
+            pauseMusic();
+            startShopMusic();
+            resumeShopMusic();
         }
     }
     #endregion
 
     public void endMinigame()
     {
+        Debug.Log("STOPPING GAME");
         GameManager.GameManagerInstance.setMinigameActivity(false);
         foodCanvas.SetActive(false);
         waterCanvas.SetActive(false);
         gorbageCanvas.SetActive(false);
         shopCanvas.SetActive(false);
-        stopFoodMusic();
-        stopWaterMusic();
-        stopGorbageMusic();
+        allowForCallbacks = false;
+        //stopFoodMusic();
+        //stopWaterMusic();
+        //stopGorbageMusic();
         stopShopMusic();
-        resumeWalkMusic();
+        //resumeWalkMusic();
     }
 
     void Callback_Function(object in_Cookie, AkCallbackType in_Type, object in_Info)

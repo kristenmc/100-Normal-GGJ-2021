@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FishMinigameManager : MonoBehaviour
 {
+    [SerializeField] bool gameStarted = false;
     [SerializeField] GameObject fishThree;
     [SerializeField] GameObject fishFour;
     [SerializeField] GameObject fishFive;
@@ -79,7 +80,16 @@ public class FishMinigameManager : MonoBehaviour
                 //play close hand animation
             }
         }
-        timeBeforeClick -= Time.deltaTime;
+        if(gameStarted)
+        {
+            timeBeforeClick -= Time.deltaTime;
+        }
+        if (timeBeforeClick <= -5)
+        {
+            gameStarted = false;
+            timeBeforeClick = 300;
+            MiniGameManager.MiniGameManagerInstance.endMinigame();
+        }
     }
 
     public void fishAi(int beatMapInt)
@@ -191,5 +201,10 @@ public class FishMinigameManager : MonoBehaviour
             fishFive.SetActive(false);
         }
 
+    }
+
+    public void startGame()
+    {
+        gameStarted = true;
     }
 }
