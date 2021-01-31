@@ -103,6 +103,9 @@
 					</Playlist>
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="Gorbage_Music" ID="{EBF9402E-001B-4F51-AB6B-88F0879E951A}" ShortID="25302918">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="124"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
@@ -114,7 +117,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Gorbage_Gathering" ID="{48DFCBEB-ADFE-4081-B71F-AD8C08AC55B5}" ShortID="99315804">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="39455.6462585034"/>
+								<Property Name="EndPosition" Type="Real64" Value="39697.5817423744"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -169,7 +172,7 @@
 								<MusicCue Name="Exit Cue" ID="{42E4975C-1004-443E-B8AA-15EEAE314817}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="39455.6462585034"/>
+										<Property Name="TimeMs" Type="Real64" Value="36290.3225806452"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
@@ -202,6 +205,9 @@
 					</Playlist>
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="Water_Music" ID="{42A3EF00-9DCC-4788-8179-1A6606E2C216}" ShortID="257049317">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="132"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
@@ -268,7 +274,7 @@
 								<MusicCue Name="Exit Cue" ID="{B72C2AFA-485C-424C-A11E-C958542076AB}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="34550.1814058957"/>
+										<Property Name="TimeMs" Type="Real64" Value="32727.2727272727"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
