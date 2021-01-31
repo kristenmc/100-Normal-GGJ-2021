@@ -41,7 +41,10 @@ public class GorbageGame : MonoBehaviour
     {
         currentBeatMapInt = beatMapInt - 48;
         //spawn gorbage
-        if(currentBeatMapInt)
+        if(currentBeatMapInt == 0)
+        {
+
+        }
     }
 
     void GorbageTick()
