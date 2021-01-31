@@ -83,6 +83,7 @@ public class FishMinigameManager : MonoBehaviour
     {
         //Debug.Log("Fish AI: " + beatMapInt);
         currentBeatMapInt = beatMapInt - 48;
+        //spawn fish 3
         if(currentBeatMapInt == 3)
         {
             countFishThree = true;
@@ -96,7 +97,8 @@ public class FishMinigameManager : MonoBehaviour
             timeBeforeClick = 60f / 120f * (pathThree.Length + 1f);
             fishGettable = true;
         }
-        else if(currentBeatMapInt == 4)
+        //spawn fish 4
+        else if (currentBeatMapInt == 4)
         {
             countFishFour = true;
             fishCounter = 0;
@@ -109,7 +111,8 @@ public class FishMinigameManager : MonoBehaviour
             timeBeforeClick = 60f / 120f * (pathFour.Length + 1f);
             fishGettable = true;
         }
-        else if(currentBeatMapInt == 5)
+        //spawn fish 5
+        else if (currentBeatMapInt == 5)
         {
             countFishFive = true;
             fishCounter = 0;
@@ -122,20 +125,24 @@ public class FishMinigameManager : MonoBehaviour
             timeBeforeClick = 60f / 120f * (pathFive.Length + 1f);
             fishGettable = true;
         }
+        //move all fish
         else if(currentBeatMapInt == 0)
         {
+            //fish 3 movement
             if(countFishThree)
             {
                 fishThree.GetComponent<RectTransform>().localPosition = pathThree[fishCounter].GetComponent<RectTransform>().localPosition;
                 fishCounter++;
                 timeBeforeClick = 60f / 120f * (pathThree.Length + 1f - fishCounter);
             }
+            //fish 4 movement
             else if(countFishFour)
             {
                 fishFour.GetComponent<RectTransform>().localPosition = pathFour[fishCounter].GetComponent<RectTransform>().localPosition;
                 fishCounter++;
                 timeBeforeClick = 60f / 120f * (pathFour.Length + 1f - fishCounter);
             }
+            //fish 5 movement
             else if(countFishFive)
             {
                 fishFive.GetComponent<RectTransform>().localPosition = pathFive[fishCounter].GetComponent<RectTransform>().localPosition;
@@ -143,6 +150,7 @@ public class FishMinigameManager : MonoBehaviour
                 timeBeforeClick = 60f / 120f * (pathFive.Length + 1f - fishCounter);
             }
         }
+        //final movement the fish makes (enters the paw/reticle)
         else if(currentBeatMapInt == 2)
         {
             if(countFishThree)
@@ -163,6 +171,7 @@ public class FishMinigameManager : MonoBehaviour
             countFishFive = false;
             fishCounter = 0;
         }
+        //reset fish
         else if(currentBeatMapInt == 1)
         {
             fishThree.SetActive(false);
