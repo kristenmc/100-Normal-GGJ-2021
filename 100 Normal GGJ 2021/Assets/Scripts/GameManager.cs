@@ -53,6 +53,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject mapCanvas;
     [SerializeField] GameObject mapPointer;
     #endregion
+
+    #region Items
+    [SerializeField] int numNets;
+    [SerializeField] int numWaterPurifier;
+    [SerializeField] int numMetalDetector;
+    [SerializeField] float itemModifier = .33f;
+    #endregion
     void Awake()
     {
         GameManagerInstance = this;
@@ -285,6 +292,36 @@ public class GameManager : MonoBehaviour
     public void resetEarthRotation()
     {
         earth.GetComponent<MovementScript>().resetRotation();
+    }
+
+    public void changeNetsAmt(int amt)
+    {
+        numNets += amt;
+    }
+
+    public void changePurifierAmt(int amt)
+    {
+        numWaterPurifier += amt;
+    }
+
+    public void changeDetectorAmt(int amt)
+    {
+        numMetalDetector += amt;
+    }
+
+    public int getNetsAmt()
+    {
+        return numNets;
+    }
+    
+    public int getPurifierAmt()
+    {
+        return numWaterPurifier;
+    }
+
+    public int getDetectorAmt()
+    {
+        return numMetalDetector;
     }
     #endregion
 

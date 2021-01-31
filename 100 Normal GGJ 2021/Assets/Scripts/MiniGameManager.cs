@@ -61,47 +61,58 @@ public class MiniGameManager : MonoBehaviour
     #region Start Minigame
     public void startFoodMinigame()
     {
-        foodCanvas.SetActive(true);
-        GameManager.GameManagerInstance.setMinigameActivity(true);
-        pauseMusic();
-        startFoodMusic();
-        resumeFoodMusic();
-        generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(foodBeatMapLength, foodBeatMapParts);
-        allowForCallbacks = true;
-        currentBeatmapLocation = 0;
-        //temp func for testing callback logic
-        MiniGameManagerInstance.onBeatCall += callBackTest;
+        if (!allowForCallbacks)
+        {
+            foodCanvas.SetActive(true);
+            GameManager.GameManagerInstance.setMinigameActivity(true);
+            pauseMusic();
+            startFoodMusic();
+            resumeFoodMusic();
+            generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(foodBeatMapLength, foodBeatMapParts);
+            allowForCallbacks = true;
+            currentBeatmapLocation = 0;
+            //temp func for testing callback logic
+            MiniGameManagerInstance.onBeatCall += callBackTest;
+        }
     }
 
     public void startWaterMinigame()
     {
-        waterCanvas.SetActive(true);
-        GameManager.GameManagerInstance.setMinigameActivity(true);
-        pauseMusic();
-        startWaterMusic();
-        generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(waterBeatMapLength, waterBeatMapParts);
-        allowForCallbacks = true;
-        currentBeatmapLocation = 0;
-        //temp func for testing callback logic
-        MiniGameManagerInstance.onBeatCall += callBackTest;
+        if (!allowForCallbacks)
+        {
+            waterCanvas.SetActive(true);
+            GameManager.GameManagerInstance.setMinigameActivity(true);
+            pauseMusic();
+            startWaterMusic();
+            generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(waterBeatMapLength, waterBeatMapParts);
+            allowForCallbacks = true;
+            currentBeatmapLocation = 0;
+            //temp func for testing callback logic
+            MiniGameManagerInstance.onBeatCall += callBackTest;
+        }
     }
 
     public void startGorbageMinigame()
     {
-        gorbageCanvas.SetActive(true);
-        GameManager.GameManagerInstance.setMinigameActivity(true);
-        pauseMusic();
-        startGorbageMusic();
-        generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(gorbageBeatMapLength, gorbageBeatMapParts);
-        allowForCallbacks = true;
-        currentBeatmapLocation = 0;
-        //temp func for testing callback logic
-        MiniGameManagerInstance.onBeatCall += callBackTest;
+        if (!allowForCallbacks)
+        {
+            gorbageCanvas.SetActive(true);
+            GameManager.GameManagerInstance.setMinigameActivity(true);
+            pauseMusic();
+            startGorbageMusic();
+            generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(gorbageBeatMapLength, gorbageBeatMapParts);
+            allowForCallbacks = true;
+            currentBeatmapLocation = 0;
+            //temp func for testing callback logic
+            MiniGameManagerInstance.onBeatCall += callBackTest;
+        }
     }
 
     public void startShopInteraction()
     {
-
+        if (!allowForCallbacks)
+        {
+        }
     }
     #endregion
 
@@ -125,6 +136,7 @@ public class MiniGameManager : MonoBehaviour
         {
             if(currentBeatmapLocation < generatedBeatMap.Length)
             {
+                Debug.Log("Current Beat on Beatmap: " + generatedBeatMap[currentBeatmapLocation]);
                 MiniGameManagerInstance.onBeatCall(generatedBeatMap[currentBeatmapLocation]);
             }
             currentBeatmapLocation++;
@@ -133,7 +145,7 @@ public class MiniGameManager : MonoBehaviour
 
     public void callBackTest(int i)
     {
-        Debug.Log(i);
+        Debug.Log(generatedBeatMap[currentBeatmapLocation] + " should be equal to: " + i);
     }
 
     public void pauseMusic()
