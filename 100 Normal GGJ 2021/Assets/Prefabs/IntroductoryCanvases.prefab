@@ -1971,9 +1971,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Your home is gone. All you have left is a little clump of ice. Explore
-    and search around for a new place to live. Make sure you have enough food and
-    water, though, and pick up as many other new friends as you can. '
+  m_text: Your home has been lost and all you have left of it is a little clump of
+    ice. Explore the world to find a new place to call home. During your journey,
+    you may find new friends also looking for a new home, so bring them along! As
+    you travel, be sure to have enough food and water to survive!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
