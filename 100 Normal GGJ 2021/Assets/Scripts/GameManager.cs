@@ -323,6 +323,11 @@ public class GameManager : MonoBehaviour
     {
         return numMetalDetector;
     }
+
+    public float getItemMult()
+    {
+        return itemModifier;
+    }
     #endregion
 
     #region Canvas Funcs

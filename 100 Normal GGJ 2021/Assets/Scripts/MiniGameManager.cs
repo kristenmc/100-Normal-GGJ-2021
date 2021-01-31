@@ -64,21 +64,21 @@ public class MiniGameManager : MonoBehaviour
         timer = 0;
     }
 
-    bool isOnBeat()
+    public bool isOnBeat()
     {
         if (timer <= leeWay)
         {
             return true;
         }
-        else if (timer >= 60 / 120 - leeWay && currentMiniGameName == InteractType.Food)
+        else if (timer >= 60f / 120f - leeWay && currentMiniGameName == InteractType.Food)
         {
             return true;
         }
-        else if (timer >= 60 / 132 - leeWay && currentMiniGameName == InteractType.Water)
+        else if (timer >= 60f / 132f - leeWay && currentMiniGameName == InteractType.Water)
         {
             return true;
         }
-        else if (timer >= 60 / 124 - leeWay && currentMiniGameName == InteractType.Gorbage)
+        else if (timer >= 60f / 124f - leeWay && currentMiniGameName == InteractType.Gorbage)
         {
             return true;
         }
@@ -86,6 +86,11 @@ public class MiniGameManager : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public float getLeeway()
+    {
+        return leeWay;
     }
 
     // Update is called once per frame
@@ -104,6 +109,7 @@ public class MiniGameManager : MonoBehaviour
         if (!allowForCallbacks)
         {
             foodCanvas.SetActive(true);
+            foodCanvas.GetComponent<FishMinigameManager>().resetNumFishGot();
             GameManager.GameManagerInstance.setMinigameActivity(true);
             pauseMusic();
             startFoodMusic();
@@ -111,6 +117,7 @@ public class MiniGameManager : MonoBehaviour
             generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(foodBeatMapLength, foodBeatMapParts);
             allowForCallbacks = true;
             currentBeatmapLocation = 0;
+            currentMiniGameName = InteractType.Food;
             //temp func for testing callback logic
             MiniGameManagerInstance.onBeatCall += callBackTest;
         }
@@ -127,6 +134,7 @@ public class MiniGameManager : MonoBehaviour
             generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(waterBeatMapLength, waterBeatMapParts);
             allowForCallbacks = true;
             currentBeatmapLocation = 0;
+            currentMiniGameName = InteractType.Water;
             //temp func for testing callback logic
             MiniGameManagerInstance.onBeatCall += callBackTest;
         }
@@ -143,6 +151,7 @@ public class MiniGameManager : MonoBehaviour
             generatedBeatMap = gameObject.GetComponent<BeatMapMaker>().GenerateBeatMap(gorbageBeatMapLength, gorbageBeatMapParts);
             allowForCallbacks = true;
             currentBeatmapLocation = 0;
+            currentMiniGameName = InteractType.Gorbage;
             //temp func for testing callback logic
             MiniGameManagerInstance.onBeatCall += callBackTest;
         }
@@ -176,7 +185,7 @@ public class MiniGameManager : MonoBehaviour
         {
             if(currentBeatmapLocation < generatedBeatMap.Length)
             {
-                Debug.Log("Current Beat on Beatmap: " + generatedBeatMap[currentBeatmapLocation]);
+                //Debug.Log("Current Beat on Beatmap: " + generatedBeatMap[currentBeatmapLocation]);
                 MiniGameManagerInstance.onBeatCall(generatedBeatMap[currentBeatmapLocation]);
             }
             currentBeatmapLocation++;
@@ -185,7 +194,7 @@ public class MiniGameManager : MonoBehaviour
 
     public void callBackTest(int i)
     {
-        Debug.Log(generatedBeatMap[currentBeatmapLocation] + " should be equal to: " + i);
+        //Debug.Log(generatedBeatMap[currentBeatmapLocation] + " should be equal to: " + i);
     }
 
     public void pauseMusic()

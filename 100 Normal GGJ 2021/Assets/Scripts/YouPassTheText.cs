@@ -5,7 +5,6 @@ using TMPro;
 
 public class YouPassTheText : MonoBehaviour
 {
-    [SerializeField] int Number;
     [SerializeField] TextMeshProUGUI textThing;
     // Start is called before the first frame update
     void Start()
@@ -13,8 +12,9 @@ public class YouPassTheText : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void updateText(int amt)
     {
-        textThing.SetText("Current Score: {0}", Number);
+        textThing.SetText("Current Score: {0}", amt);
     }
+
 }
