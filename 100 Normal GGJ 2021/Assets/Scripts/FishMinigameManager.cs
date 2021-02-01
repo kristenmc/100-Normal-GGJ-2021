@@ -25,6 +25,15 @@ public class FishMinigameManager : MonoBehaviour
     [SerializeField] int numFishGot = 0;
     [SerializeField] YouPassTheText textCounter;
 
+    [SerializeField] GameObject openPaw;
+    [SerializeField] GameObject closePaw;
+    [SerializeField] GameObject fullPaw;
+
+    [SerializeField] RectTransform[] waves;
+    [SerializeField] float[] waveSpeeds;
+    [SerializeField] float pawTime = 0f;
+    [SerializeField] float maxPawTime = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,46 +49,55 @@ public class FishMinigameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for(int i = 0; i < waves.Length; i++)
+        {
+            waves[i].Rotate(new Vector3(0, 0, waveSpeeds[i]));
+        }
+
         if(Input.GetButtonDown("Jump"))
         {
-            AkSoundEngine.PostEvent("Play_Claw_Swipe", gameObject);
-            if(MiniGameManager.MiniGameManagerInstance.isOnBeat())
+            if(currentFish!= null)
             {
-                if (timeBeforeClick <= MiniGameManager.MiniGameManagerInstance.getLeeway() && timeBeforeClick >= -MiniGameManager.MiniGameManagerInstance.getLeeway())
+                AkSoundEngine.PostEvent("Play_Claw_Swipe", gameObject);
+                if (MiniGameManager.MiniGameManagerInstance.isOnBeat())
                 {
-                    //add a fish
-                    if(fishGettable)
+                    if (timeBeforeClick <= MiniGameManager.MiniGameManagerInstance.getLeeway() && timeBeforeClick >= -MiniGameManager.MiniGameManagerInstance.getLeeway())
                     {
-                        AkSoundEngine.PostEvent("Play_Fish_Caught", gameObject);
-                        int tempfish = 1;
-                        for(int i = 0; i < GameManager.GameManagerInstance.getNetsAmt(); i++)
+                        //add a fish
+                        if (fishGettable)
                         {
-                            float randomNum = Random.Range(0.0f, 1.0f);
-                            if (randomNum <= GameManager.GameManagerInstance.getItemMult())
+                            AkSoundEngine.PostEvent("Play_Fish_Caught", gameObject);
+                            int tempfish = 1;
+                            for (int i = 0; i < GameManager.GameManagerInstance.getNetsAmt(); i++)
                             {
-                                tempfish++;
+                                float randomNum = Random.Range(0.0f, 1.0f);
+                                if (randomNum <= GameManager.GameManagerInstance.getItemMult())
+                                {
+                                    tempfish++;
+                                }
                             }
+                            numFishGot += tempfish;
+                            GameManager.GameManagerInstance.changeFood(tempfish);
+                            GameManager.GameManagerInstance.changeWater(tempfish);
+                            //Debug.Log("Got a Fish");
+                            fishGettable = false;
+                            textCounter.updateText(numFishGot);
                         }
-                        numFishGot += tempfish;
-                        GameManager.GameManagerInstance.changeFood(tempfish);
-                        GameManager.GameManagerInstance.changeWater(tempfish);
-                        //Debug.Log("Got a Fish");
-                        fishGettable = false;
-                        textCounter.updateText(numFishGot);
+                        else
+                        {
+                            AkSoundEngine.PostEvent("Play_Miss", gameObject);
+                            Debug.Log("Missed the Fish");
+                        }
                     }
-                    else
+                    else if (timeBeforeClick > MiniGameManager.MiniGameManagerInstance.getLeeway())
                     {
-                        AkSoundEngine.PostEvent("Play_Miss", gameObject);
-                        Debug.Log("Missed the Fish");
+                        fishGettable = false;
+                        currentFish.GetComponent<Image>().color = new Color(255, 0, 0, 100);
                     }
+                    //play close hand animation
                 }
-                else if(timeBeforeClick > MiniGameManager.MiniGameManagerInstance.getLeeway())
-                {
-                    fishGettable = false; 
-                    currentFish.GetComponent<Image>().color = new Color(255, 0, 0, 100);
-                }
-                //play close hand animation
             }
+            
         }
         if(gameStarted)
         {
@@ -91,6 +109,30 @@ public class FishMinigameManager : MonoBehaviour
             gameStarted = false;
             timeBeforeClick = 300;
             MiniGameManager.MiniGameManagerInstance.endMinigame();
+        }
+
+        pawTime += Time.deltaTime;
+        if(Input.GetButtonDown("Jump"))
+        {
+            if (timeBeforeClick <= MiniGameManager.MiniGameManagerInstance.getLeeway() && timeBeforeClick >= -MiniGameManager.MiniGameManagerInstance.getLeeway())
+            {
+                openPaw.SetActive(false);
+                fullPaw.SetActive(true);
+                closePaw.SetActive(false);
+            }
+            else
+            {
+                openPaw.SetActive(false);
+                fullPaw.SetActive(false);
+                closePaw.SetActive(true);
+            }
+            pawTime = 0f;
+        }
+        else if(pawTime > maxPawTime)
+        { 
+            openPaw.SetActive(true);
+            closePaw.SetActive(false);
+            fullPaw.SetActive(false);
         }
     }
 

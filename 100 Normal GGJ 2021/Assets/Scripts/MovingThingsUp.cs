@@ -9,6 +9,11 @@ public class MovingThingsUp : MonoBehaviour
     [SerializeField] float moveDistance;
     [SerializeField] float moveTime;
 
+
+    private void Update()
+    {
+        //MoveTheObject();
+    }
     void MoveTheObject()
     {
         LeanTween.moveY(MoveableObject, moveDistance, moveTime);
