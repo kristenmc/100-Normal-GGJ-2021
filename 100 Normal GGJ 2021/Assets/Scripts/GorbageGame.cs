@@ -91,6 +91,7 @@ public class GorbageGame : MonoBehaviour
                         selectedGarbage.GetComponent<GorbageScript>().yeet(leftYeet);
                         if (!isGorbage)
                         {
+                            AkSoundEngine.PostEvent("Play_Garbage_Punch", gameObject);
                             itemGettable = false;
                             badGarbageCount++;
                             textCounterBadGarbage.updateText(badGarbageCount);
@@ -98,6 +99,7 @@ public class GorbageGame : MonoBehaviour
                         }
                         else if(isGorbage)
                         {
+                            AkSoundEngine.PostEvent("Play_Miss", gameObject);
                             itemGettable = false;
                             selectedGarbage.GetComponent<Image>().color = new Color(255, 0, 0, 100);
                             //mistake notification
@@ -118,6 +120,7 @@ public class GorbageGame : MonoBehaviour
                         selectedGarbage.GetComponent<GorbageScript>().yeet(rightYeet);
                         if (isGorbage)
                         {
+                            AkSoundEngine.PostEvent("Play_Garbage_Punch", gameObject);
                             itemGettable = false;
                             int tempGorbage = 1;
                             for (int i = 0; i < GameManager.GameManagerInstance.getDetectorAmt(); i++)
@@ -134,6 +137,7 @@ public class GorbageGame : MonoBehaviour
                         }
                         else if (!isGorbage)
                         {
+                            AkSoundEngine.PostEvent("Play_Miss", gameObject);
                             itemGettable = false;
                             gorbageCount--;
                             textCounterGorbage.updateText(gorbageCount);
@@ -159,6 +163,7 @@ public class GorbageGame : MonoBehaviour
         //spawn gorbage
         if(currentBeatMapInt == 3)
         {
+            AkSoundEngine.PostEvent("Play_Garbage_Fall", gameObject);
             selectedGarbage = findInactiveGorbage();
             if(selectedGarbage != null)
             {
@@ -172,6 +177,7 @@ public class GorbageGame : MonoBehaviour
         //spawn bad garbage
         else if(currentBeatMapInt == 4)
         {
+            AkSoundEngine.PostEvent("Play_Garbage_Fall", gameObject);
             selectedGarbage = findInactiveGarbage();
             if (selectedGarbage != null)
             {
