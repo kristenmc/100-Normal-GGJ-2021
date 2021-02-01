@@ -418,6 +418,13 @@
 				<Folder Name="Gorbage_SFX" ID="{B53FDF40-A7A3-4397-AB66-091CA9E5FE70}" ShortID="951689786">
 					<ChildrenList>
 						<Sound Name="Garbage_Fall" ID="{FD75C0BB-E939-4CA4-90FC-A18342647642}" ShortID="906867359">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
@@ -440,6 +447,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Garbage_Punch" ID="{8C29C0E0-8D22-47D1-968B-9D459A475A5F}" ShortID="229411687">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
