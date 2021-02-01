@@ -159,61 +159,65 @@ public class GorbageGame : MonoBehaviour
 
     public void gorbageAI(int beatMapInt)
     {
-        currentBeatMapInt = beatMapInt - 48;
-        //spawn gorbage
-        if(currentBeatMapInt == 3)
+        if(gameStarted)
         {
-            AkSoundEngine.PostEvent("Play_Garbage_Fall", gameObject);
-            selectedGarbage = findInactiveGorbage();
-            if(selectedGarbage != null)
+            currentBeatMapInt = beatMapInt - 48;
+            //spawn gorbage
+            if (currentBeatMapInt == 3)
             {
-                selectedGarbage.GetComponent<GorbageScript>().resetGorbagePosition();
-                isGorbage = true;
-                timeBeforeClick = 3 * baseLerpTime;
-                itemGettable = true;
-                selectedGarbage.GetComponent<Image>().color = new Color(255, 255, 255, 100);
+                AkSoundEngine.PostEvent("Play_Garbage_Fall", gameObject);
+                selectedGarbage = findInactiveGorbage();
+                if (selectedGarbage != null)
+                {
+                    selectedGarbage.GetComponent<GorbageScript>().resetGorbagePosition();
+                    isGorbage = true;
+                    timeBeforeClick = 3 * baseLerpTime;
+                    itemGettable = true;
+                    selectedGarbage.GetComponent<Image>().color = new Color(255, 255, 255, 100);
+                }
             }
-        }
-        //spawn bad garbage
-        else if(currentBeatMapInt == 4)
-        {
-            AkSoundEngine.PostEvent("Play_Garbage_Fall", gameObject);
-            selectedGarbage = findInactiveGarbage();
-            if (selectedGarbage != null)
+            //spawn bad garbage
+            else if (currentBeatMapInt == 4)
             {
-                selectedGarbage.GetComponent<GorbageScript>().resetGorbagePosition();
-                isGorbage = false;
-                timeBeforeClick = 3 * baseLerpTime;
-                itemGettable = true;
-                selectedGarbage.GetComponent<Image>().color = new Color(255, 255, 255, 100);
+                AkSoundEngine.PostEvent("Play_Garbage_Fall", gameObject);
+                selectedGarbage = findInactiveGarbage();
+                if (selectedGarbage != null)
+                {
+                    selectedGarbage.GetComponent<GorbageScript>().resetGorbagePosition();
+                    isGorbage = false;
+                    timeBeforeClick = 3 * baseLerpTime;
+                    itemGettable = true;
+                    selectedGarbage.GetComponent<Image>().color = new Color(255, 255, 255, 100);
+                }
             }
-        }
-        else if(currentBeatMapInt == 1)
-        {
-            if (selectedGarbage != null)
+            else if (currentBeatMapInt == 1)
             {
-                selectedGarbage.GetComponent<GorbageScript>().fixLerpTimer(baseLerpTime * 6);
-                timeBeforeClick = 2 * baseLerpTime;
+                if (selectedGarbage != null)
+                {
+                    selectedGarbage.GetComponent<GorbageScript>().fixLerpTimer(baseLerpTime * 6);
+                    timeBeforeClick = 2 * baseLerpTime;
+                }
             }
-        }
-        else if(currentBeatMapInt == 5)
-        {
-            if (selectedGarbage != null)
+            else if (currentBeatMapInt == 5)
             {
-                selectedGarbage.GetComponent<GorbageScript>().fixLerpTimer(baseLerpTime * 5);
-                timeBeforeClick = baseLerpTime;
+                if (selectedGarbage != null)
+                {
+                    selectedGarbage.GetComponent<GorbageScript>().fixLerpTimer(baseLerpTime * 5);
+                    timeBeforeClick = baseLerpTime;
+                }
             }
-        }
-        //allow for collection
-        else if(currentBeatMapInt == 2)
-        {
-            timeBeforeClick = 0f;
-            if(selectedGarbage != null)
+            //allow for collection
+            else if (currentBeatMapInt == 2)
             {
-                selectedGarbage.GetComponent<GorbageScript>().fixLerpTimer(baseLerpTime * 4);
-            }
+                timeBeforeClick = 0f;
+                if (selectedGarbage != null)
+                {
+                    selectedGarbage.GetComponent<GorbageScript>().fixLerpTimer(baseLerpTime * 4);
+                }
 
+            }
         }
+        
     }
 
     public GameObject findInactiveGorbage()
