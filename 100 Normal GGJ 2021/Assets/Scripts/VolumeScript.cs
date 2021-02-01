@@ -11,6 +11,14 @@ public class VolumeScript : MonoBehaviour
     [SerializeField] float music_Volume;
     [SerializeField] float sfx_Volume;
 
+    [SerializeField] string slider_String;
+
+    public void Start()
+    {
+        //Set_Specific_Volume(slider_String, Get_Specific_Volume(slider_String)); 
+    }
+    
+    
     public void Set_Specific_Volume(string what_Value)
     {
         float value = this_Slider.value;
@@ -31,7 +39,28 @@ public class VolumeScript : MonoBehaviour
             AkSoundEngine.SetRTPCValue("SFXVolume", sfx_Volume);
 
         }
+    }
 
+    public void Set_Specific_Volume(string what_Value, float num_Value)
+    {
+
+        if(what_Value == "Master")
+        {
+            master_Volume = num_Value;
+            AkSoundEngine.SetRTPCValue("MasterVolume", master_Volume);
+        }
+        else if(what_Value == "Music")
+        {
+            music_Volume = num_Value;
+            AkSoundEngine.SetRTPCValue("MusicVolume", music_Volume);
+        }
+        else if(what_Value == "SFX")
+        {
+            sfx_Volume = num_Value;
+            AkSoundEngine.SetRTPCValue("SFXVolume", sfx_Volume);
+
+        }
+        this_Slider.value = num_Value;
     }
 
     public float Get_Specific_Volume(string what_Value)

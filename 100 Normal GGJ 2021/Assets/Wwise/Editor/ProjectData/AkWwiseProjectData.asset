@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d273438f8e5a50458bda682b9ec14669
     GuidInternal: 
-    m_lastTime: -8585894681975759834
+    m_lastTime: -8585894577049144440
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -801,6 +801,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585896274702044345
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /100 Normal GGJ 2021_WwiseProject
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
