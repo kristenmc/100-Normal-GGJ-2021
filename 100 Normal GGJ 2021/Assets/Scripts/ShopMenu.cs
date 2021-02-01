@@ -174,18 +174,19 @@ public class ShopMenu : MonoBehaviour
             else if (tags[0] == "net")
             {
                 gameManager.changeNetsAmt(upgradeGained);
-                gameManager.changeGorbage(-upgradePrice);
+                gameManager.changeGorbage(-(upgradePrice + gameManager.getNetsAmt()));
             }
             //adds to the metal detector stat increaseing player yield 
             else if (tags[0] == "metal_detector")
             {
                 gameManager.changeDetectorAmt(upgradeGained);
-                gameManager.changeGorbage(-upgradePrice);
+                gameManager.changeGorbage(-(upgradePrice + gameManager.getDetectorAmt()));
             }
             //This resets the canvas and prepares for the next visit
             else if (tags[0] == "end")
             {   
                 this.GetComponent<Canvas>().enabled = false;
+                MiniGameManager.MiniGameManagerInstance.endMinigame();
             }
         }
     }
