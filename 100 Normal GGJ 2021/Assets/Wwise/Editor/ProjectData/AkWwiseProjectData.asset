@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d273438f8e5a50458bda682b9ec14669
     GuidInternal: 
-    m_lastTime: -8585894701952478601
+    m_lastTime: -8585894681975759834
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -90,7 +90,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: bcdbade782bb83499eca6636e2bb1a5a
     GuidInternal: 
-    m_lastTime: -8585894722330743616
+    m_lastTime: -8585894681976507835
     List:
     - name: Fishing
       guid: d9a300a811871c4b8a158d7f920c361c
@@ -476,6 +476,22 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 34.55018
       minDuration: 34.55018
+    - name: Reset_Fish_Cues
+      guid: c868879688090044985603aa1e467f3b
+      id: 3043548158
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX
+        ObjectType: 4
+      - ElementName: Fishing
+        ObjectType: 4
+      - ElementName: Reset_Fish_Cues
+        ObjectType: 3
+      Path: Default Work Unit\SFX\Fishing\Reset_Fish_Cues
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Resume_Fishing_Music
       guid: 1558504786554f4f9fa42b2a68b32716
       id: 3784097043
@@ -726,7 +742,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 137581ae13f5874a8dbf3df5d91bf5e2
     GuidInternal: 
-    m_lastTime: -8585894701953525805
+    m_lastTime: -8585894681976507835
     List:
     - name: MasterVolume
       guid: 30ca4dad6985714d94b28d1553e94bb6
