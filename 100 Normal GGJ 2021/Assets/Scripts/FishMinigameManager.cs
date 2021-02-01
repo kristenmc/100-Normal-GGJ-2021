@@ -87,6 +87,7 @@ public class FishMinigameManager : MonoBehaviour
         }
         if (timeBeforeClick <= -5)
         {
+            AkSoundEngine.PostEvent("Reset_Fish_Cues", gameObject);
             gameStarted = false;
             timeBeforeClick = 300;
             MiniGameManager.MiniGameManagerInstance.endMinigame();
@@ -100,7 +101,7 @@ public class FishMinigameManager : MonoBehaviour
         //spawn fish 3
         if(currentBeatMapInt == 3)
         {
-            AkSoundEngine.PostEvent("Play_Fish_Spawn", gameObject);
+            AkSoundEngine.PostEvent("Play_Fish3_Cues", gameObject);
             countFishThree = true;
             fishCounter = 0;
             fishThree.SetActive(true);
@@ -115,7 +116,7 @@ public class FishMinigameManager : MonoBehaviour
         //spawn fish 4
         else if (currentBeatMapInt == 4)
         {
-            AkSoundEngine.PostEvent("Play_Fish_Spawn", gameObject);
+            AkSoundEngine.PostEvent("Play_Fish4_Cues", gameObject);
             countFishFour = true;
             fishCounter = 0;
             fishThree.SetActive(false);
@@ -130,7 +131,7 @@ public class FishMinigameManager : MonoBehaviour
         //spawn fish 5
         else if (currentBeatMapInt == 5)
         {
-            AkSoundEngine.PostEvent("Play_Fish_Spawn", gameObject);
+            AkSoundEngine.PostEvent("Play_Fish5_Cues", gameObject);
             countFishFive = true;
             fishCounter = 0;
             fishThree.SetActive(false);

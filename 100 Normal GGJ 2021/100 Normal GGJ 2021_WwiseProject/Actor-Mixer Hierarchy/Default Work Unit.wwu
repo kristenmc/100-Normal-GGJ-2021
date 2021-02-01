@@ -28,6 +28,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Fish_Caught" ID="{5E3671F4-84F5-4BE9-B54F-28353A767218}" ShortID="28212324">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
@@ -50,6 +57,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Fish_Spawn" ID="{0AD2FC84-6AD7-48CE-B9EB-D8A9597B1251}" ShortID="46435094">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
@@ -172,12 +186,35 @@
 										<ActiveSource Name="Fish_Jump" ID="{84527871-3EF1-4CD7-AEE0-6A9BD759BEE1}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="Silence_3" ID="{1B4558FF-2D2D-49D2-8776-1E4D2C9DDE28}" ShortID="627820671">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Silence_3" ID="{A6406AAA-FB99-4332-9E56-2E1F72467FCA}">
+											<Language>SFX</Language>
+											<AudioFile>Silence_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="158984614"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence_3" ID="{A6406AAA-FB99-4332-9E56-2E1F72467FCA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<Playlist>
 								<ItemRef Name="Fish_Jump_-1" ID="{8CB29159-D294-41A0-9F31-8396353646C1}"/>
 								<ItemRef Name="Fish_Jump" ID="{17B5A34D-D86C-4B3F-BE3F-77FF784A5844}"/>
 								<ItemRef Name="Fish_Jump_2" ID="{B1D4097F-2CC4-40DF-AAE4-AF2A446019AB}"/>
 								<ItemRef Name="Fish_Jump_3" ID="{0C7E7136-B4E5-406E-8AA2-BBE931CB4631}"/>
+								<ItemRef Name="Silence_3" ID="{1B4558FF-2D2D-49D2-8776-1E4D2C9DDE28}"/>
 							</Playlist>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Fish3_Cues" ID="{36F33631-024E-4D97-A62D-40B85EB5FC74}" ShortID="23845014">
@@ -259,11 +296,34 @@
 										<ActiveSource Name="Fish_Jump_3" ID="{644B0C46-02DC-4AFF-A1D9-362776DBCE1C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="Silence_1" ID="{8CE582F3-9520-4B6B-8E60-880B61DAE0E2}" ShortID="143880076">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Silence_1" ID="{643C0F55-8C95-4BA9-92CB-80952DB5CB25}">
+											<Language>SFX</Language>
+											<AudioFile>Silence_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="210932479"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence_1" ID="{643C0F55-8C95-4BA9-92CB-80952DB5CB25}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<Playlist>
 								<ItemRef Name="Fish_Jump" ID="{1C3961AF-0D2B-449F-9354-A540BF7B0047}"/>
 								<ItemRef Name="Fish_Jump_2" ID="{C24214D7-1D80-4F42-BD2B-C84491B45B86}"/>
 								<ItemRef Name="Fish_Jump_3" ID="{5C9564F5-0F5B-4B2E-93BF-D8B87531404D}"/>
+								<ItemRef Name="Silence_1" ID="{8CE582F3-9520-4B6B-8E60-880B61DAE0E2}"/>
 							</Playlist>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Fish4_Cues" ID="{3082464E-1BDB-4BB9-9FA0-013AFB1F549E}" ShortID="382149622">
@@ -323,10 +383,33 @@
 										<ActiveSource Name="Fish_Jump_3" ID="{94003F51-0FB6-49D1-83A6-DA89C5B61DAE}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="Silence_2" ID="{DFB3DC73-E55D-4FEC-8EBA-B6C6689DC27E}" ShortID="93343571">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43BD3BFC-C083-40BE-A3C5-AD71917CC536}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{8F4373D2-5A8E-4550-8BDA-682B9EC14669}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Silence_2" ID="{A307664F-3430-40B1-899C-D7194E6BB6B6}">
+											<Language>SFX</Language>
+											<AudioFile>Silence_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="161544440"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence_2" ID="{A307664F-3430-40B1-899C-D7194E6BB6B6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<Playlist>
 								<ItemRef Name="Fish_Jump_2" ID="{140882B8-156C-4C33-BB26-80FA05C4D93E}"/>
 								<ItemRef Name="Fish_Jump_3" ID="{678959AB-BD52-4BBD-A135-323327D55228}"/>
+								<ItemRef Name="Silence_2" ID="{DFB3DC73-E55D-4FEC-8EBA-B6C6689DC27E}"/>
 							</Playlist>
 						</RandomSequenceContainer>
 					</ChildrenList>

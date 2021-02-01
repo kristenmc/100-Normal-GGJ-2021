@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAY_SHOP_MUSIC = 186839574U;
         static const AkUniqueID PLAY_WALK_MUSIC = 2449179153U;
         static const AkUniqueID PLAY_WATER_MUSIC = 1754655507U;
+        static const AkUniqueID RESET_FISH_CUES = 3043548158U;
         static const AkUniqueID RESUME_FISHING_MUSIC = 3784097043U;
         static const AkUniqueID RESUME_GORBAGE_MUSIC = 1625338090U;
         static const AkUniqueID RESUME_SHOP_MUSIC = 868285983U;

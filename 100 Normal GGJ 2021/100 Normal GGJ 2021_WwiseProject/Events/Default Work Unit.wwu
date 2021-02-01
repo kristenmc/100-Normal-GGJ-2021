@@ -373,6 +373,43 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Reset_Fish_Cues" ID="{968768C8-0988-4400-9856-03AA1E467F3B}">
+									<ChildrenList>
+										<Action Name="" ID="{E8462C61-BB67-4780-BCBD-065C962317F3}" ShortID="905694352">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="42"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fish3_Cues" ID="{36F33631-024E-4D97-A62D-40B85EB5FC74}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{C66D9B96-3AB4-41DB-9ED5-1F828BA9FDC6}" ShortID="732321938">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="42"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fish4_Cues" ID="{3082464E-1BDB-4BB9-9FA0-013AFB1F549E}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{0DCD71F5-7F6A-46F0-8C14-F618856610C0}" ShortID="1071199334">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="42"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Fish5_Cues" ID="{C21FC355-FA40-45E0-AD37-EE5D83BE231B}" WorkUnitID="{9C42CE95-BE79-4E75-A87B-6CDF2EF5EC7E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Gorbage" ID="{62CDADF2-CE3A-4240-A340-613850E9486A}" ShortID="250093229">

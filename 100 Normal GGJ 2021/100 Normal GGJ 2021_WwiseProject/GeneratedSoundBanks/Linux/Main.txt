@@ -20,6 +20,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2792772864	Resume_Water_Music			\Default Work Unit\Music\Water Music\Resume_Water_Music	
 	2857380544	Resume_Walk_Music			\Default Work Unit\Music\Walk Music\Resume_Walk_Music	
 	3023653035	Stop_Walk_Music			\Default Work Unit\Music\Walk Music\Stop_Walk_Music	
+	3043548158	Reset_Fish_Cues			\Default Work Unit\SFX\Fishing\Reset_Fish_Cues	
 	3048328929	Pause_Water_Music			\Default Work Unit\Music\Water Music\Pause_Water_Music	
 	3207147996	Play_Fishing_Music			\Default Work Unit\Music\Fishing Music\Play_Fishing_Music	
 	3385706007	Stop_Gorbage_Music			\Default Work Unit\Music\Gorbage Music\Stop_Gorbage_Music	
@@ -37,7 +38,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	26803223	Water Gathering	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Water Gathering_2FBCAB86.wem		\Interactive Music Hierarchy\Default Work Unit\Minigames\Water_Music\Water Gathering\Water Gathering		364755
 	67212082	Claw_Swipe	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Claw_Swipe_2CC72C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fishing_SFX\Claw_Swipe		2196
 	92582444	Miss	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Miss_2CC72C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Miss		4035
+	158984614	Silence_3	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Silence_3_2CC72C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fishing_SFX\Fish5_Cues\Silence_3		654
+	161544440	Silence_2	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Silence_2_2CC72C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fishing_SFX\Fish4_Cues\Silence_2		654
 	164427237	Fish_Jump_-1	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Fish_Jump_-1_2CC72C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fishing_SFX\Fish5_Cues\Fish_Jump_-1		1914
+	210932479	Silence_1	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Silence_1_2CC72C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fishing_SFX\Fish3_Cues\Silence_1		654
 	222757940	Fish_Caught	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Fish_Caught_2CC72C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fishing_SFX\Fish_Caught		6397
 	276475677	Walk_Loop	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Walk_Loop_2FBCAB86.wem		\Interactive Music Hierarchy\Default Work Unit\Walk_Music\Walk_Loop\Walk_Loop		633280
 	295753483	Garbage_Fall	D:\GitHub\100-Normal-GGJ-2021\100 Normal GGJ 2021\100 Normal GGJ 2021_WwiseProject\.cache\Linux\SFX\Garbage_Fall_2CC72C6C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Gorbage_SFX\Garbage_Fall		18878

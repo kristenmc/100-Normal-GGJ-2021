@@ -302,7 +302,7 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Fishing\Play_Fish3_Cues
       maxAttenuation: 0
-      maxDuration: 0.120181
+      maxDuration: 1.846145
       minDuration: 0.120181
     - name: Play_Fish4_Cues
       guid: 6363b52cf54a1845bc56f95ef239b066
@@ -318,7 +318,7 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Fishing\Play_Fish4_Cues
       maxAttenuation: 0
-      maxDuration: 0.120181
+      maxDuration: 1.846145
       minDuration: 0.120181
     - name: Play_Fish5_Cues
       guid: e8cc68f42feb784fb1ccc3acded75ad4
@@ -334,7 +334,7 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\SFX\Fishing\Play_Fish5_Cues
       maxAttenuation: 0
-      maxDuration: 0.120181
+      maxDuration: 1.846145
       minDuration: 0.120181
     - name: Play_Fishing_Music
       guid: f685385468b5334a861f0f122ea13ef0
